@@ -1,0 +1,124 @@
+{
+	"plantas_domesticas": [
+		{
+			"nombre": "Sacuanjoche",
+			"area_natural": "Bosques secos y cálidos",
+			"humedad_ideal": "Baja (40-50%)",
+			"imagen": "https://example.com/images/sacuanjoche.jpg"
+		},
+		{
+			"nombre": "Ruda",
+			"area_natural": "Regiones templadas y tropicales",
+			"humedad_ideal": "Media (50-60%)",
+			"imagen": "https://example.com/images/ruda.jpg"
+		},
+		{
+			"nombre": "Albahaca",
+			"area_natural": "Zonas tropicales y subtropicales",
+			"humedad_ideal": "Alta (60-70%)",
+			"imagen": "https://example.com/images/albahaca.jpg"
+		},
+		{
+			"nombre": "Orégano",
+			"area_natural": "Regiones cálidas y secas",
+			"humedad_ideal": "Baja (40-50%)",
+			"imagen": "https://example.com/images/oregano.jpg"
+		},
+		{
+			"nombre": "Menta",
+			"area_natural": "Climas húmedos y frescos",
+			"humedad_ideal": "Alta (70-80%)",
+			"imagen": "https://example.com/images/menta.jpg"
+		},
+		{
+			"nombre": "Manzanilla",
+			"area_natural": "Pastizales y bordes de caminos",
+			"humedad_ideal": "Media (50-60%)",
+			"imagen": "https://example.com/images/manzanilla.jpg"
+		},
+		{
+			"nombre": "Zarzaparrilla",
+			"area_natural": "Bosques húmedos y tropicales",
+			"humedad_ideal": "Alta (70-80%)",
+			"imagen": "https://example.com/images/zarzaparrilla.jpg"
+		},
+		{
+			"nombre": "Jiñocuabo",
+			"area_natural": "Bosques secos y sabanas",
+			"humedad_ideal": "Media (50-60%)",
+			"imagen": "https://example.com/images/jinocuabo.jpg"
+		},
+		{
+			"nombre": "Hombre grande",
+			"area_natural": "Selvas tropicales",
+			"humedad_ideal": "Alta (70-80%)",
+			"imagen": "https://example.com/images/hombre_grande.jpg"
+		},
+		{
+			"nombre": "Zorrillo",
+			"area_natural": "Selvas tropicales y zonas húmedas",
+			"humedad_ideal": "Alta (75-85%)",
+			"imagen": "https://example.com/images/zorrillo.jpg"
+		},
+		{
+			"nombre": "Guarumo",
+			"area_natural": "Bosques tropicales",
+			"humedad_ideal": "Media (50-60%)",
+			"imagen": "https://example.com/images/guarumo.jpg"
+		},
+		{
+			"nombre": "Balsa",
+			"area_natural": "Bosques húmedos y ríos",
+			"humedad_ideal": "Alta (70-80%)",
+			"imagen": "https://example.com/images/balsa.jpg"
+		},
+		{
+			"nombre": "Genízaro",
+			"area_natural": "Zonas secas y cálidas",
+			"humedad_ideal": "Baja (40-50%)",
+			"imagen": "https://example.com/images/genizaro.jpg"
+		},
+		{
+			"nombre": "Ceiba",
+			"area_natural": "Selvas tropicales y sabanas",
+			"humedad_ideal": "Media (50-60%)",
+			"imagen": "https://example.com/images/ceiba.jpg"
+		},
+		{
+			"nombre": "Palo de hule",
+			"area_natural": "Selvas tropicales húmedas",
+			"humedad_ideal": "Alta (75-85%)",
+			"imagen": "https://example.com/images/palo_de_hule.jpg"
+		},
+		{
+			"nombre": "Laurel",
+			"area_natural": "Bosques secos y húmedos",
+			"humedad_ideal": "Media (50-60%)",
+			"imagen": "https://example.com/images/laurel.jpg"
+		},
+		{
+			"nombre": "Cortez amarillo",
+			"area_natural": "Bosques secos y montañosos",
+			"humedad_ideal": "Media (50-60%)",
+			"imagen": "https://example.com/images/cortez_amarillo.jpg"
+		},
+		{
+			"nombre": "Pochote",
+			"area_natural": "Zonas secas y cálidas",
+			"humedad_ideal": "Baja (40-50%)",
+			"imagen": "https://example.com/images/pochote.jpg"
+		},
+		{
+			"nombre": "Cenízaro",
+			"area_natural": "Bosques secos",
+			"humedad_ideal": "Baja (40-50%)",
+			"imagen": "https://example.com/images/cenizaro.jpg"
+		},
+		{
+			"nombre": "Caimito",
+			"area_natural": "Zonas tropicales y cálidas",
+			"humedad_ideal": "Alta (70-80%)",
+			"imagen": "https://example.com/images/caimito.jpg"
+		}
+	]
+}
