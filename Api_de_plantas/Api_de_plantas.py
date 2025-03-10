@@ -1,39 +1,31 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
+import json
 
 import reflex as rx
 
-from rxconfig import config
+with open("db/plantas_domesticas.json", "r", encoding="UTF-8") as archivo:
+    data = json.load(archivo)
+    plantas_domesticas: list = data["plantas_domesticas"]
 
+print(plantas_domesticas)
 
-class State(rx.State):
-    """The app state."""
-
-    ...
-
-
-def index() -> rx.Component:
-    # Welcome Page (Index)
-    return rx.container(
-        rx.color_mode.button(position="top-right"),
-        rx.vstack(
-            rx.heading("Welcome to Reflex!", size="9"),
-            rx.text(
-                "Get started by editing ",
-                rx.code(f"{config.app_name}/{config.app_name}.py"),
-                size="5",
-            ),
-            rx.link(
-                rx.button("Check out our docs!"),
-                href="https://reflex.dev/docs/getting-started/introduction/",
-                is_external=True,
-            ),
-            spacing="5",
-            justify="center",
-            min_height="85vh",
-        ),
-        rx.logo(),
+def contenedor_planta(planta: dict) -> rx.Component:
+    return rx.box(
+        rx.image(planta["imagen"]),
+        rx.text(planta["nombre"]),
+        rx.text(planta["humedad_ideal"]),
+        rx.text(planta["area_natural"]),
+        bg="#000000"
     )
 
+def main() -> rx.Component:
+    return rx.box(
+        rx.text("Plantas domésticas", size="7", weight="bold"),
+        rx.grid(
+            *[contenedor_planta(planta) for planta in plantas_domesticas]
+        ),
+        bg="#000000"
+    )
 
-app = rx.App()
-app.add_page(index)
+# Configurar Reflex para servir la aplicación
+app= rx.App()
+app.add_page(main)
