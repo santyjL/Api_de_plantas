@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class PaletaDeCOlores(Enum):
+class PaletaDeColores(Enum):
     BG_BLANCO = "#FFFFFF"
     PRINCIPAL_VERDE = "#1BAF25"
     SECUNDARIO_CELESTE = "#5A77D6"

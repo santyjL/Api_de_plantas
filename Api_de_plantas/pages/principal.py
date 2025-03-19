@@ -1,27 +1,24 @@
-import json
 
 import reflex as rx
 
-with open("db/plantas_domesticas.json", "r", encoding="UTF-8") as archivo:
-    data = json.load(archivo)
-    plantas_domesticas: list = data["plantas_domesticas"]
+from Api_de_plantas.components.imagenes import foto_principal
+from Api_de_plantas.components.navbar import navbar
+from routers import routers
+from styles import PaletaDeColores
 
-print(plantas_domesticas)
 
-def contenedor_planta(planta: dict) -> rx.Component:
-    return rx.box(
-        rx.image(planta["imagen"]),
-        rx.text(planta["nombre"]),
-        rx.text(planta["humedad_ideal"]),
-        rx.text(planta["area_natural"]),
-        bg="#000000"
-    )
-
+@rx.page(route=routers.PRINCIPAL.value)
 def main() -> rx.Component:
     return rx.box(
-        rx.text("Plantas domésticas", size="7", weight="bold"),
-        rx.grid(
-            *[contenedor_planta(planta) for planta in plantas_domesticas]
+        rx.vstack(
+            rx.box(
+            navbar(),
+            foto_principal(),
+            bg= PaletaDeColores.TERCIARIO_CAFE.value
+            )
         ),
-        bg="#000000"
+
+        bg= PaletaDeColores.BG_BLANCO.value,
+        background_size="cover",
+        min_height="100vh",
     )
