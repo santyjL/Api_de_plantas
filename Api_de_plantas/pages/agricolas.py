@@ -29,7 +29,6 @@ def plantas_agricolas() -> rx.Component:
                 foto_principal(),
                 bg=PaletaDeColores.TERCIARIO_CAFE.value
             ),
-            rx.text(f"Página actual: {PlantasState.pagina}", color="black"),
             grid(),
             botones_paginacion(),
             footer()

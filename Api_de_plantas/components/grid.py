@@ -25,12 +25,12 @@ def contenedor_planta(planta: dict) -> rx.Component:
 def grid() -> rx.Component:
     titulo = rx.cond(
         PlantasState.opcion == 1,
-        "Plantas domésticas",
-        "Plantas agrícolas"
+        "🎍Plantas domésticas🎍",
+        "🎍Plantas agrícolas🎍"
     )
 
     return rx.box(
-        rx.text(titulo, size="7", weight="bold"),
+        rx.text(titulo, size="7", weight="bold", align="center", margin=Tamaños.MARGIN_GRANDE.value),
         rx.cond(
             (PlantasState.pagina < 0) | (PlantasState.pagina >= 3),
             rx.text("Página no encontrada", size="7", weight="bold"),
