@@ -45,6 +45,6 @@ def grid() -> rx.Component:
                 align_items="center",
             ),
         ),
-        width="80%",
+        width="70%",
         margin="0 auto",
     )

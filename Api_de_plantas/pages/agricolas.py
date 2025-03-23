@@ -1,6 +1,7 @@
 import reflex as rx
 
 from Api_de_plantas.backend.estados import PlantasState
+from Api_de_plantas.components.enlaces import enlace_paginas
 from Api_de_plantas.components.footer import footer
 from Api_de_plantas.components.grid import grid
 from Api_de_plantas.components.imagenes import foto_principal
@@ -16,7 +17,7 @@ def botones_paginacion() -> rx.Component:
         rx.button("3", on_click=lambda: PlantasState.cambiar_valor(2)),
         justify="center",
         align_items="center",
-        width="80%",
+        width="5%",
         margin="0 auto",
     )
 
@@ -31,6 +32,7 @@ def plantas_agricolas() -> rx.Component:
             ),
             grid(),
             botones_paginacion(),
+            enlace_paginas(2),
             footer()
         ),
         bg=PaletaDeColores.BG_BLANCO.value,
