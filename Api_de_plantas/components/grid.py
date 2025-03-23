@@ -30,7 +30,7 @@ def grid() -> rx.Component:
     )
 
     return rx.box(
-        rx.text(titulo, size="7", weight="bold", align="center", margin=Tamaños.MARGIN_GRANDE.value),
+        rx.text(titulo, size="8", weight="bold", align="center", margin=Tamaños.MARGIN_GRANDE.value),
         rx.cond(
             (PlantasState.pagina < 0) | (PlantasState.pagina >= 3),
             rx.text("Página no encontrada", size="7", weight="bold"),
