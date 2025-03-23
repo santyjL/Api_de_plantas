@@ -1,28 +1,17 @@
-import json
-
 import reflex as rx
 
+from Api_de_plantas.backend.estados import PlantasState
 from styles import PaletaDeColores, Tamaños
 
-with open("db/plantas_domesticas.json", "r", encoding="UTF-8") as archivo:
-    data = json.load(archivo)
-    plantas_domesticas: list = data["plantas_domesticas"]
-
-with open("db/plantas_agricolas.json", "r", encoding="UTF-8") as archivo:
-    data = json.load(archivo)
-    plantas_agricolas: list = data["plantas_agricolas"]
-
-def dividir_cantidad_de_plantas(lista_plantas: list, tamano: int = 9) -> list:
-    return [lista_plantas[i:i + tamano] for i in range(0, len(lista_plantas), tamano)]
 
 def contenedor_planta(planta: dict) -> rx.Component:
     return rx.box(
         rx.vstack(
             rx.image(planta["imagen"], width="250px", height="auto"),
             rx.box(
-                rx.text(planta["nombre"], size="6", weight="bold"),
-                rx.text(planta["humedad_ideal"], size="4", weight="bold"),
-                rx.text(planta["area_natural"], size="3"),
+                rx.text(planta["nombre"]),
+                rx.text(planta["humedad_ideal"]),
+                rx.text(planta["area_natural"]),
                 align="start"
             )
         ),
@@ -33,26 +22,28 @@ def contenedor_planta(planta: dict) -> rx.Component:
         bg=PaletaDeColores.PRINCIPAL_VERDE.value
     )
 
-def grid(opcion: int, pagina_var) -> rx.Component:
-    plantas = plantas_domesticas if opcion == 1 else plantas_agricolas
-    titulo = "Plantas domésticas" if opcion == 1 else "Plantas agrícolas"
-    sublistas = dividir_cantidad_de_plantas(plantas)
+def grid() -> rx.Component:
+    titulo = rx.cond(
+        PlantasState.opcion == 1,
+        "Plantas domésticas",
+        "Plantas agrícolas"
+    )
 
     return rx.box(
         rx.text(titulo, size="7", weight="bold"),
         rx.cond(
-            (pagina_var < 0) | (pagina_var >= len(sublistas)),
+            (PlantasState.pagina < 0) | (PlantasState.pagina >= 3),
             rx.text("Página no encontrada", size="7", weight="bold"),
             rx.grid(
                 rx.foreach(
-                    sublistas[pagina_var],
-                    contenedor_planta
+                    PlantasState.pagina_actual,
+                    lambda planta: contenedor_planta(planta)
                 ),
                 columns="3",
                 rows="3",
                 justify="center",
                 align_items="center",
-            )
+            ),
         ),
         width="80%",
         margin="0 auto",
