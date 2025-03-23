@@ -23,7 +23,7 @@ def botones_paginacion() -> rx.Component:
 
 @rx.page(route=routers.DOMESTICAS.value)
 def plantas_domesticas() -> rx.Component:
-    PlantasState.opcion = 1
+    PlantasState.cambiar_opcion(1)
     return rx.box(
         rx.vstack(
             rx.box(

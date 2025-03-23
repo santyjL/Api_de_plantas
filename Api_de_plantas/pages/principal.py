@@ -7,14 +7,16 @@ from routers import routers
 from styles import PaletaDeColores, Tamaños
 
 
-def cuerpo(nombre: str, width: str, height: str, bg =PaletaDeColores.PRINCIPAL_VERDE.value, ) -> rx.Component:
+def cuerpo(nombre: str, width: str, height: str, redireccion: str, bg=PaletaDeColores.PRINCIPAL_VERDE.value) -> rx.Component:
     return rx.card(
+
         rx.vstack(
             rx.center(
                 rx.text(nombre, align_items="center", font_size="2em", weight="bold"),
                 align="center",
             )
         ),
+        on_click=lambda: rx.redirect(redireccion),
         bg=bg,
         width=width,
         height=height,
@@ -25,15 +27,15 @@ def grid_cuerpo() -> rx.Component:
     return rx.box(
         rx.grid(
             rx.vstack(
-                cuerpo("Sobre Nosotros", "80vw", "30vh", PaletaDeColores.SECUNDARIO_CELESTE.value,),
+                cuerpo("Sobre Nosotros", "80vw", "30vh",routers.PRINCIPAL.value, PaletaDeColores.SECUNDARIO_CELESTE.value,),
                 grid_column="span 2",
             ),
             rx.hstack(
-                cuerpo("Regador de plantas automatico", "40vw", "60vh"),
+                cuerpo("Regador de plantas automatico", "40vw", "60vh", routers.PRODUCTO.value),
                 grid_row="span 2",
             ),
-            cuerpo("Plantas de interior", "40vw", "27vh"),
-            cuerpo("Plantas Agricolas", "40vw", "27vh"),
+            cuerpo("Plantas de interior", "40vw", "27vh", routers.DOMESTICAS.value),
+            cuerpo("Plantas Agricolas", "40vw", "27vh", routers.AGRICOLAS.value),
             columns="2",
             rows="3",
         ),
