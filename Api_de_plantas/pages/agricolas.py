@@ -21,8 +21,9 @@ def botones_paginacion() -> rx.Component:
         margin="0 auto",
     )
 
-@rx.page(route=f"{routers.AGRICOLAS.value}")
+@rx.page(route=routers.AGRICOLAS.value)
 def plantas_agricolas() -> rx.Component:
+    PlantasState.opcion = 2
     return rx.box(
         rx.vstack(
             rx.box(
