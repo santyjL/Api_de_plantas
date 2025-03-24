@@ -5,9 +5,10 @@ import reflex as rx
 
 
 class PlantasState(rx.State):
+    opcion_cambio = 0
     numero: int = 0
     pagina: int = 0
-    opcion: int = 1
+    opcion: int = 2
 
     @rx.var
     def plantas_actuales(self) -> List[Dict]:
@@ -31,7 +32,8 @@ class PlantasState(rx.State):
         return self.sublistas[self.pagina] if self.sublistas else []
 
     def cambiar_opcion(self, opcion: int):
-        self.opcion = opcion
+        self.opcion_cambio = opcion
+        self.opcion = self.opcion_cambio
 
     def cambiar_valor(self, num: int):
         self.numero = num

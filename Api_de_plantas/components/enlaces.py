@@ -1,5 +1,6 @@
 import reflex as rx
 
+from Api_de_plantas.backend.estados import PlantasState
 from routers import routers
 from styles import PaletaDeColores, Tamaños
 
@@ -35,7 +36,8 @@ def enlace_paginas(opcion: int) -> rx.Component:
                         "backgroundColor": PaletaDeColores.SECUNDARIO_CELESTE.value,
                         "fontWeight": "bold",
                         "fontSize": "size-7",
-                    }
+                    },
+                    on_click = lambda: PlantasState.cambiar_opcion(2)
                 ),
                 rx.link(
                     "Plantas Domesticas",  # Texto directo como hijo
@@ -49,7 +51,8 @@ def enlace_paginas(opcion: int) -> rx.Component:
                         "backgroundColor": PaletaDeColores.SECUNDARIO_CELESTE.value,
                         "fontWeight": "bold",
                         "fontSize": "size-7",
-                    }
+                    },
+                    on_click = lambda: PlantasState.cambiar_opcion(1),
                 ),
             ),
             rx.link(

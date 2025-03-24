@@ -1,5 +1,6 @@
 import reflex as rx
 
+from Api_de_plantas.backend.estados import PlantasState
 from Api_de_plantas.components.footer import footer
 from Api_de_plantas.components.imagenes import foto_principal
 from Api_de_plantas.components.navbar import navbar
@@ -34,8 +35,14 @@ def grid_cuerpo() -> rx.Component:
                 cuerpo("Regador de plantas automatico", "40vw", "60vh", routers.PRODUCTO.value),
                 grid_row="span 2",
             ),
-            cuerpo("Plantas de interior", "40vw", "27vh", routers.DOMESTICAS.value),
-            cuerpo("Plantas Agricolas", "40vw", "27vh", routers.AGRICOLAS.value),
+            rx.box(
+                cuerpo("Plantas de interior", "40vw", "27vh", routers.DOMESTICAS.value),
+                on_click=lambda: PlantasState.cambiar_opcion(1),
+            ),
+            rx.box(
+                cuerpo("Plantas Agricolas", "40vw", "27vh", routers.AGRICOLAS.value),
+                on_click=lambda: PlantasState.cambiar_opcion(2),
+            ),
             columns="2",
             rows="3",
         ),
