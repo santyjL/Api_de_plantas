@@ -22,6 +22,9 @@ def cuerpo(nombre: str, width: str, height: str, redireccion: str, bg=PaletaDeCo
         width=width,
         height=height,
         margin=Tamaños.MARGIN_PEQUEÑO.value,
+        border=Tamaños.BORDER.value,
+        border_radius=Tamaños.RADIUS.value,
+        cursor="pointer",
     )
 
 def grid_cuerpo() -> rx.Component:

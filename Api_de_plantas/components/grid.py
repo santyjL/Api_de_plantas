@@ -19,7 +19,9 @@ def contenedor_planta(planta: dict) -> rx.Component:
         height="auto",
         padding=Tamaños.PADDING_MEDIANO.value,
         margin=Tamaños.MARGIN_PEQUEÑO.value,
-        bg=PaletaDeColores.PRINCIPAL_VERDE.value
+        bg=PaletaDeColores.PRINCIPAL_VERDE.value,
+        border = Tamaños.BORDER.value,
+        border_radius = Tamaños.RADIUS.value
     )
 
 def grid() -> rx.Component:
