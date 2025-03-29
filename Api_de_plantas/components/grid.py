@@ -7,7 +7,7 @@ from styles import PaletaDeColores, Tamaños
 def contenedor_planta(planta: dict) -> rx.Component:
     return rx.box(
         rx.vstack(
-            rx.image(planta["imagen"], width="250px", height="auto"),
+            rx.image(src=planta["imagen"], width="250px", height="150px"),
             rx.box(
                 rx.text(planta["nombre"]),
                 rx.text(planta["humedad_ideal"]),
