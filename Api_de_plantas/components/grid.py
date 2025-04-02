@@ -9,9 +9,9 @@ def contenedor_planta(planta: dict) -> rx.Component:
         rx.vstack(
             rx.image(src=planta["imagen"], width="250px", height="150px"),
             rx.box(
-                rx.text(planta["nombre"]),
-                rx.text(planta["humedad_ideal"]),
-                rx.text(planta["area_natural"]),
+                rx.text(planta["nombre"], font_family="Oswald"),
+                rx.text(planta["humedad_ideal"], font_family="Oswald"),
+                rx.text(planta["area_natural"], font_family="Oswald"),
                 align="start"
             )
         ),
@@ -32,10 +32,14 @@ def grid() -> rx.Component:
     )
 
     return rx.box(
-        rx.text(titulo, size="8", weight="bold", align="center", margin=Tamaños.MARGIN_GRANDE.value),
+        rx.text(titulo, size="8", weight="bold",
+                align="center", margin=Tamaños.MARGIN_GRANDE.value,
+                font_family="Itim"),
         rx.cond(
             (PlantasState.pagina < 0) | (PlantasState.pagina >= 3),
-            rx.text("Página no encontrada", size="7", weight="bold"),
+            rx.text("Página no encontrada",
+                    size="7", weight="bold",
+                    font_family="Itim"),
             rx.grid(
                 rx.foreach(
                     PlantasState.pagina_actual,
