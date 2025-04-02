@@ -8,7 +8,9 @@ from styles import PaletaDeColores, Tamaños
 def enlace_generico(label: str, redireccion: str, font_size: str, background_color: str) -> rx.Component:
     return rx.box(
         rx.center(
-        rx.text(label, align_items="center", font_size="2em", weight="bold"),
+        rx.text(label, align_items="center",
+                font_size="2em", weight="bold",
+                font_family="Itim"),
         ),
         style={
             "width": "270px",
