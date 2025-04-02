@@ -13,7 +13,9 @@ def cuerpo(nombre: str, width: str, height: str, redireccion: str, bg=PaletaDeCo
 
         rx.vstack(
             rx.center(
-                rx.text(nombre, align_items="center", font_size="2em", weight="bold"),
+                rx.text(nombre, align_items="center",
+                        font_size="2em", weight="bold",
+                        font_family="Itim"),
                 align="center",
             )
         ),
