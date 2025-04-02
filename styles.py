@@ -1,7 +1,8 @@
 from enum import Enum
 
 STYLESHEETS = [
-    "https://fonts.googleapis.com/css2?family=Itim&display=swap"
+    "https://fonts.googleapis.com/css2?family=Itim&display=swap",
+    "https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
 ]
 
 class PaletaDeColores(Enum):
