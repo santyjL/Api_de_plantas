@@ -4,121 +4,121 @@
 			"nombre": "Maíz",
 			"area_natural": "Regiones cálidas y templadas",
 			"humedad_ideal": "Media (50-60%)",
-			"imagen": "https://example.com/images/maiz.jpg"
+			"imagen": "/maiz.jpg"
 		},
 		{
 			"nombre": "Frijol",
 			"area_natural": "Zonas cálidas y tropicales",
 			"humedad_ideal": "Media (50-60%)",
-			"imagen": "https://example.com/images/frijol.jpg"
+			"imagen": "/frijol.jpg"
 		},
 		{
 			"nombre": "Arroz",
 			"area_natural": "Climas húmedos y cálidos",
 			"humedad_ideal": "Alta (70-80%)",
-			"imagen": "https://example.com/images/arroz.jpg"
+			"imagen": "/arroz.jpg"
 		},
 		{
 			"nombre": "Café",
 			"area_natural": "Regiones montañosas y húmedas",
 			"humedad_ideal": "Alta (70-80%)",
-			"imagen": "https://example.com/images/cafe.jpg"
+			"imagen": "/cafe.jpg"
 		},
 		{
 			"nombre": "Cacao",
 			"area_natural": "Selvas tropicales húmedas",
 			"humedad_ideal": "Alta (75-85%)",
-			"imagen": "https://example.com/images/cacao.jpg"
+			"imagen": "/cacao.jpg"
 		},
 		{
 			"nombre": "Plátano",
 			"area_natural": "Zonas tropicales y bajas",
 			"humedad_ideal": "Alta (75-85%)",
-			"imagen": "https://example.com/images/platano.jpg"
+			"imagen": "/platano.jpg"
 		},
 		{
 			"nombre": "Mango",
 			"area_natural": "Regiones cálidas y secas",
 			"humedad_ideal": "Baja (40-50%)",
-			"imagen": "https://example.com/images/mango.jpg"
+			"imagen": "/mango.jpg"
 		},
 		{
 			"nombre": "Papaya",
 			"area_natural": "Climas cálidos y tropicales",
 			"humedad_ideal": "Media (50-60%)",
-			"imagen": "https://example.com/images/papaya.jpg"
+			"imagen": "/papaya.jpg"
 		},
 		{
 			"nombre": "Guayaba",
 			"area_natural": "Zonas cálidas y tropicales",
 			"humedad_ideal": "Media (50-60%)",
-			"imagen": "https://example.com/images/guayaba.jpg"
+			"imagen": "/guayaba.jpg"
 		},
 		{
 			"nombre": "Nancite",
 			"area_natural": "Zonas secas y cálidas",
 			"humedad_ideal": "Baja (40-50%)",
-			"imagen": "https://example.com/images/nancite.jpg"
+			"imagen": "/nancite.jpg"
 		},
 		{
 			"nombre": "Sorgo",
 			"area_natural": "Regiones secas y semiáridas",
 			"humedad_ideal": "Baja (30-40%)",
-			"imagen": "https://example.com/images/sorgo.jpg"
+			"imagen": "/sorgo.jpg"
 		},
 		{
 			"nombre": "Achiote",
 			"area_natural": "Zonas cálidas y húmedas",
 			"humedad_ideal": "Media (50-60%)",
-			"imagen": "https://example.com/images/achiote.jpg"
+			"imagen": "/achiote.jpg"
 		},
 		{
 			"nombre": "Chiltepe",
 			"area_natural": "Zonas tropicales y húmedas",
 			"humedad_ideal": "Alta (70-80%)",
-			"imagen": "https://example.com/images/chiltepe.jpg"
+			"imagen": "/chiltepe.jpg"
 		},
 		{
 			"nombre": "Tamarindo",
 			"area_natural": "Zonas secas y cálidas",
 			"humedad_ideal": "Baja (40-50%)",
-			"imagen": "https://example.com/images/tamarindo.jpg"
+			"imagen": "/tamarindo.jpg"
 		},
 		{
 			"nombre": "Pitahaya",
 			"area_natural": "Regiones áridas y semiáridas",
 			"humedad_ideal": "Baja (30-40%)",
-			"imagen": "https://example.com/images/pitahaya.jpg"
+			"imagen": "/pitahaya.jpg"
 		},
 		{
 			"nombre": "Maracuyá",
 			"area_natural": "Zonas tropicales y húmedas",
 			"humedad_ideal": "Alta (70-80%)",
-			"imagen": "https://example.com/images/maracuyá.jpg"
+			"imagen": "/maracuya.jpg"
 		},
 		{
 			"nombre": "Granada",
 			"area_natural": "Regiones secas y cálidas",
 			"humedad_ideal": "Baja (40-50%)",
-			"imagen": "https://example.com/images/granada.jpg"
+			"imagen": "/granada.jpg"
 		},
 		{
 			"nombre": "Anona",
 			"area_natural": "Zonas tropicales y húmedas",
 			"humedad_ideal": "Media (50-60%)",
-			"imagen": "https://example.com/images/anona.jpg"
+			"imagen": "/anona.jpg"
 		},
 		{
 			"nombre": "Zapote",
 			"area_natural": "Zonas tropicales y cálidas",
 			"humedad_ideal": "Media (50-60%)",
-			"imagen": "https://example.com/images/zapote.jpg"
+			"imagen": "/zapote.jpg"
 		},
 		{
 			"nombre": "Jocote",
 			"area_natural": "Climas cálidos y secos",
 			"humedad_ideal": "Baja (40-50%)",
-			"imagen": "https://example.com/images/jocote.jpg"
+			"imagen": "/jocote.jpg"
 		}
 	]
 }
