@@ -1,5 +1,8 @@
 from enum import Enum
 
+STYLESHEETS = [
+    "https://fonts.googleapis.com/css2?family=Itim&display=swap"
+]
 
 class PaletaDeColores(Enum):
     BG_BLANCO = "#FFFFFF"
