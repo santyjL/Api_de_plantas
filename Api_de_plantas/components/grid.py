@@ -9,9 +9,9 @@ def contenedor_planta(planta: dict) -> rx.Component:
         rx.vstack(
             rx.image(src=planta["imagen"], width="250px", height="150px"),
             rx.box(
-                rx.text(planta["nombre"], font_family="Oswald"),
-                rx.text(planta["humedad_ideal"], font_family="Oswald"),
-                rx.text(planta["area_natural"], font_family="Oswald"),
+                rx.text(planta["nombre"], font_family="Oswald", font_size="1.6em"),
+                rx.text(planta["humedad_ideal"], font_family="Oswald",font_size="1.2em"),
+                rx.text(planta["area_natural"], font_family="Oswald",font_size="1.2em"),
                 align="start"
             )
         ),
