@@ -1,23 +1,21 @@
 import reflex as rx
 
-from styles import PaletaDeColores
+from styles import PaletaDeColores, Tamaños
 
-
-def footer_item(text: str, href: str) -> rx.Component:
-    return rx.link(rx.text(text, size="3"), href=href)
 
 def social_link(icon: str, href: str) -> rx.Component:
-    return rx.link(rx.icon(icon), href=href)
+    return rx.link(rx.icon(icon), href=href, color=PaletaDeColores.TERCIARIO_CAFE.value)
+
+def links() -> rx.Component:
+    return rx.flex(
+        social_link(icon="github",href="https://github.com/santyjL/Api_de_plantas"),
+        justify="end",
+        width = "100%",
+        spacing="3"
+    )
 
 def footer() -> rx.Component:
     return rx.el.footer(
-        rx.vstack(
-            rx.flex(
-                justify="between",
-                spacing="6",
-                flex_direction=["column", "column", "row"],
-                width="100%",
-            ),
             rx.divider(),
             rx.flex(
                 rx.hstack(
@@ -28,11 +26,12 @@ def footer() -> rx.Component:
                         border_radius="25%",
                     ),
                     rx.text(
-                        "© 2024 Reflex, Inc",
+                        "SifNiento",
                         size="3",
                         white_space="nowrap",
                         weight="medium",
                     ),
+                    links(),
                     spacing="2",
                     align="center",
                     justify_content=[
@@ -45,10 +44,11 @@ def footer() -> rx.Component:
                 spacing="4",
                 flex_direction=["column", "column", "row"],
                 width="100%",
+                padding= Tamaños.PADDING_MEDIANO.value
             ),
             spacing="5",
             width="100%",
+            bg = PaletaDeColores.SECUNDARIO_CELESTE.value,
+
+
         ),
-        bg = PaletaDeColores.SECUNDARIO_CELESTE.value,
-        width="100%",
-    )
