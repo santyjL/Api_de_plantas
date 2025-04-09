@@ -100,13 +100,13 @@
 			"nombre": "Granada",
 			"area_natural": "Regiones secas y cálidas",
 			"humedad_ideal": "Baja (40-50%)",
-			"imagen": "/granada.jpg"
+			"imagen": "/Granada.jpg"
 		},
 		{
 			"nombre": "Anona",
 			"area_natural": "Zonas tropicales y húmedas",
 			"humedad_ideal": "Media (50-60%)",
-			"imagen": "/anona.jpg"
+			"imagen": "/Anona.jpg"
 		},
 		{
 			"nombre": "Zapote",
