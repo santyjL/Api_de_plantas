@@ -1,12 +1,12 @@
 import reflex as rx
-from styles.styles import Tamaños
+from styles.styles import Tamaños, Textos
 
 
 def foto_principal() -> rx.Component:
     return rx.box(
         rx.flex(
             rx.heading("Somos SifNiento...", class_name="typing-effect",
-                font_size="2.5em", font_family="Sixtyfour",align="center",
+                font_size=Textos.TITULO.value, font_family="Sixtyfour",align="center",
                 justify="center", padding=Tamaños.PADDING_PEQUEÑO.value
             ),
             direction="column",

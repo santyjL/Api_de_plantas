@@ -2,11 +2,12 @@ from socketserver import ForkingTCPServer
 import reflex as rx
 
 from Api_de_plantas.backend.estados import PlantasState
+from Api_de_plantas.components.enlaces import enlace_paginas
 from Api_de_plantas.components.footer import footer
 from Api_de_plantas.components.imagenes import foto_principal
 from Api_de_plantas.components.navbar import navbar
 from routers import routers
-from styles.styles import PaletaDeColores, Tamaños
+from styles.styles import PaletaDeColores, Tamaños, Textos
 
 
 def cuerpo( nombre: str, width: str, height: str,
@@ -18,9 +19,9 @@ def cuerpo( nombre: str, width: str, height: str,
         rx.center(
             rx.vstack(
                 rx.heading(nombre, align="center",
-                        font_size="2em", weight="bold",
+                        font_size=Textos.TITULO.value, weight="bold",
                         font_family="Itim"),
-                rx.text(texto, align="center",font_size="1.2em",
+                rx.text(texto, align="center",font_size=Textos.TEXTO.value,
                 font_family="Oswald",width="80%"),
                 align="center",
                 justify="center",

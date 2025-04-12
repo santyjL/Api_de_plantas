@@ -1,7 +1,7 @@
 import reflex as rx
 
 from Api_de_plantas.backend.estados import PlantasState
-from styles.styles import PaletaDeColores, Tamaños
+from styles.styles import PaletaDeColores, Tamaños, Textos
 from routers import routers
 
 def links() -> rx.Component:
@@ -9,7 +9,7 @@ def links() -> rx.Component:
         return rx.heading(
             titulo,
             color = PaletaDeColores.SECUNDARIO_CELESTE.value,
-            font_size="1em",
+            font_size=Textos.TEXTO.value,
             font_family = "sixtyfour",
             cursor="pointer",
             filter="drop-shadow(0 0 20px rgba(33, 218, 147, 0.752))",

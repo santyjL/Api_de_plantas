@@ -1,6 +1,6 @@
 import reflex as rx
 
-from styles.styles import PaletaDeColores, Tamaños
+from styles.styles import PaletaDeColores, Tamaños, Textos
 from Api_de_plantas.backend.estados import PlantasState
 
 
@@ -11,11 +11,11 @@ def contenedor_planta(planta: dict) -> rx.Component:
                      border_radius = Tamaños.RADIUS.value),
             rx.box(
                 rx.text(planta["nombre"], font_family="Oswald",
-                         font_size="1.6em", color=PaletaDeColores.TEXTO.value),
+                         font_size=Textos.SUBTITULO.value, color=PaletaDeColores.TEXTO.value),
                 rx.text(planta["humedad_ideal"], font_family="Oswald",
-                        font_size="1.2em", color=PaletaDeColores.TEXTO.value),
+                        font_size=Textos.TEXTO.value, color=PaletaDeColores.TEXTO.value),
                 rx.text(planta["area_natural"], font_family="Oswald",
-                        font_size="1.2em", color=PaletaDeColores.TEXTO.value),
+                        font_size=Textos.TEXTO.value, color=PaletaDeColores.TEXTO.value),
                 align="start"
             )
         ),
@@ -35,13 +35,13 @@ def grid() -> rx.Component:
     )
 
     return rx.box(
-        rx.text(titulo, size="8", weight="bold",
+        rx.text(titulo, size=Textos.TITULO.value, weight="bold",
                 align="center", margin=Tamaños.MARGIN_GRANDE.value,
                 color=PaletaDeColores.SECUNDARIO_CELESTE,font_family="Itim"),
         rx.cond(
             (PlantasState.pagina < 0) | (PlantasState.pagina >= 3),
             rx.text("Página no encontrada",
-                    size="7", weight="bold",
+                    size=Textos.SUBTITULO.value, weight="bold",
                     font_family="Itim"),
             rx.grid(
                 rx.foreach(

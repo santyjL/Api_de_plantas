@@ -4,16 +4,16 @@ from Api_de_plantas.components.footer import footer
 from Api_de_plantas.components.imagenes import foto_principal
 from Api_de_plantas.components.navbar import navbar
 from routers import routers
-from styles.styles import PaletaDeColores, Tamaños
+from styles.styles import PaletaDeColores, Tamaños, Textos
 
 def pagina_no_disponible() -> rx.Component:
     return rx.flex(
         rx.heading(
             '"Pagina no disponible"',
             align="center",
+            font_family="Itim",
+            font_size=Textos.TITULO.value,
             color=PaletaDeColores.TEXTO.value,
-            font_family="Sixtyfour",
-            font_size="2em",
             weight="medium",
             border=Tamaños.BORDER.value,
             padding=Tamaños.PADDING_MEDIANO.value,
