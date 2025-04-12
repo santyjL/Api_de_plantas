@@ -1,7 +1,7 @@
 import reflex as rx
 
+from styles.styles import PaletaDeColores, Tamaños
 from Api_de_plantas.backend.estados import PlantasState
-from styles import PaletaDeColores, Tamaños
 
 
 def contenedor_planta(planta: dict) -> rx.Component:

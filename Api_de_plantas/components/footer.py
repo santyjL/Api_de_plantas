@@ -1,6 +1,6 @@
 import reflex as rx
 
-from styles import PaletaDeColores, Tamaños
+from styles.styles import PaletaDeColores, Tamaños
 
 
 def social_link(icon: str, href: str) -> rx.Component:

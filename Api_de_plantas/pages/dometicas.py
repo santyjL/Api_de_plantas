@@ -7,7 +7,7 @@ from Api_de_plantas.components.grid import grid
 from Api_de_plantas.components.imagenes import foto_principal
 from Api_de_plantas.components.navbar import navbar
 from routers import routers
-from styles import PaletaDeColores
+from styles.styles import PaletaDeColores
 
 
 def botones_paginacion() -> rx.Component:

@@ -18,6 +18,11 @@ class PaletaDeColores(Enum):
 
     TEXTO= "#FFFFFF"
 
+class Textos(Enum):
+    TITULO = "2.5em"
+    SUBTITULO = "1.7em"
+    TEXTO = "1em"
+
 class Tamaños(Enum):
     PADDING_MEDIANO = "1em"
     PADDING_PEQUEÑO = "0.5em"

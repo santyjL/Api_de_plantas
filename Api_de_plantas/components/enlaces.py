@@ -2,7 +2,7 @@ import reflex as rx
 
 from Api_de_plantas.backend.estados import PlantasState
 from routers import routers
-from styles import PaletaDeColores, Tamaños
+from styles.styles import PaletaDeColores, Tamaños
 
 
 def enlace_generico(label: str, redireccion: str, font_size: str, background_color: str) -> rx.Component:
