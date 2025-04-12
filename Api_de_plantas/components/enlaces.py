@@ -6,15 +6,15 @@ from styles import PaletaDeColores, Tamaños
 
 
 def enlace_generico(label: str, redireccion: str, font_size: str, background_color: str) -> rx.Component:
-    return rx.box(
+    return rx.button(
         rx.center(
         rx.text(label, align_items="center",
-                font_size="2em", weight="bold",
+                font_size="1.5em", weight="bold",
                 font_family="Itim"),
         ),
         style={
             "width": "270px",
-            "height": "160px",
+            "height": "100px",
             "text_align": "center",
             "padding": Tamaños.PADDING_MEDIANO.value,
             "margin": Tamaños.MARGIN_PEQUEÑO.value,
@@ -35,7 +35,7 @@ def enlace_paginas(opcion: int) -> rx.Component:
                 "Menu de inicio",
                 routers.PRINCIPAL.value,
                 "5",
-                PaletaDeColores.TERCIARIO_CAFE.value
+                PaletaDeColores.BOTONES.value
             ),
             rx.cond(
                 (opcion == 1),
@@ -44,17 +44,17 @@ def enlace_paginas(opcion: int) -> rx.Component:
                         "Plantas Agricolas",
                         routers.AGRICOLAS.value,
                         "5",
-                        PaletaDeColores.SECUNDARIO_CELESTE.value,
+                        PaletaDeColores.BOTONES.value,
 
                     ),
                     on_click=lambda: PlantasState.cambiar_opcion(2)
                 ),
                 rx.box(
                     enlace_generico(
-                        "Plantas Domesticas",
+                        "Plantas de interior",
                         routers.DOMESTICAS.value,
                         "5",
-                        PaletaDeColores.SECUNDARIO_CELESTE.value,
+                        PaletaDeColores.BOTONES.value,
 
                     ),
                     on_click=lambda: PlantasState.cambiar_opcion(1)

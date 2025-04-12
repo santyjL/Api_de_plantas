@@ -7,11 +7,15 @@ from styles import PaletaDeColores, Tamaños
 def contenedor_planta(planta: dict) -> rx.Component:
     return rx.box(
         rx.vstack(
-            rx.image(src=planta["imagen"], width="250px", height="150px"),
+            rx.image(src=planta["imagen"], width="250px", height="150px",
+                     border_radius = Tamaños.RADIUS.value),
             rx.box(
-                rx.text(planta["nombre"], font_family="Oswald", font_size="1.6em"),
-                rx.text(planta["humedad_ideal"], font_family="Oswald",font_size="1.2em"),
-                rx.text(planta["area_natural"], font_family="Oswald",font_size="1.2em"),
+                rx.text(planta["nombre"], font_family="Oswald",
+                         font_size="1.6em", color=PaletaDeColores.TEXTO.value),
+                rx.text(planta["humedad_ideal"], font_family="Oswald",
+                        font_size="1.2em", color=PaletaDeColores.TEXTO.value),
+                rx.text(planta["area_natural"], font_family="Oswald",
+                        font_size="1.2em", color=PaletaDeColores.TEXTO.value),
                 align="start"
             )
         ),
@@ -20,14 +24,13 @@ def contenedor_planta(planta: dict) -> rx.Component:
         padding=Tamaños.PADDING_MEDIANO.value,
         margin=Tamaños.MARGIN_PEQUEÑO.value,
         bg=PaletaDeColores.PRINCIPAL_VERDE.value,
-        border = Tamaños.BORDER.value,
         border_radius = Tamaños.RADIUS.value
     )
 
 def grid() -> rx.Component:
     titulo = rx.cond(
         PlantasState.opcion == 1,
-        "🎍Plantas domésticas🎍",
+        "🎍Plantas de interior🎍",
         "🎍Plantas agrícolas🎍"
     )
 
