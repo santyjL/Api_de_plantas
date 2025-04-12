@@ -64,7 +64,7 @@ def enlace_paginas(opcion: int) -> rx.Component:
                 "Regador de plantas automatico",
                 routers.PRODUCTO.value,
                 "5",
-                PaletaDeColores.TERCIARIO_CAFE.value
+                PaletaDeColores.TERCIARIO_NARANJA.value
             ),
             columns="3",
             rows="1",

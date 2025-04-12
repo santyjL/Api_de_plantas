@@ -4,7 +4,7 @@ from styles import PaletaDeColores, Tamaños
 
 
 def social_link(icon: str, href: str) -> rx.Component:
-    return rx.link(rx.icon(icon), href=href, color=PaletaDeColores.TERCIARIO_CAFE.value)
+    return rx.link(rx.icon(icon), href=href, color=PaletaDeColores.TERCIARIO_NARANJA.value)
 
 def links() -> rx.Component:
     return rx.flex(

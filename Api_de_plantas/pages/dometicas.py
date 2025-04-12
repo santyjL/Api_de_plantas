@@ -27,7 +27,7 @@ def plantas_domesticas() -> rx.Component:
             rx.box(
                 navbar(),
                 foto_principal(),
-                bg=PaletaDeColores.TERCIARIO_CAFE.value
+                bg=PaletaDeColores.TERCIARIO_NARANJA.value
             ),
             grid(),
             botones_paginacion(),

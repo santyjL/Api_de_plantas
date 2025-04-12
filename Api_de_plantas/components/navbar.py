@@ -11,6 +11,7 @@ def links() -> rx.Component:
             color = PaletaDeColores.SECUNDARIO_CELESTE.value,
             font_size="1em",
             font_family = "sixtyfour",
+            cursor="pointer",
             on_click=rx.redirect(link)
         ),
 
@@ -31,7 +32,7 @@ def navbar() -> rx.Component:
     return rx.hstack(
         rx.image(src="/favicon.ico"),
         links(),
-        bg = PaletaDeColores.TERCIARIO_CAFE.value,
+        bg = PaletaDeColores.TERCIARIO_NARANJA.value,
         heigth = "6em",
         padding= Tamaños.PADDING_PEQUEÑO.value,
         width = "100%",
