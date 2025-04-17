@@ -1,8 +1,8 @@
 import reflex as rx
 
-from Api_de_plantas.components.footer import footer
-from Api_de_plantas.components.imagenes import foto_principal
-from Api_de_plantas.components.navbar import navbar
+from Api_de_plantas.components.footer import crear_pie_pagina
+from Api_de_plantas.components.imagenes import crear_banner_principal
+from Api_de_plantas.components.navbar import crear_barra_superior
 from routers import routers
 from styles.styles import PaletaDeColores, Tamaños, Textos
 
@@ -31,12 +31,12 @@ def regador() -> rx.Component:
     return rx.box(
         rx.vstack(
             rx.box(
-                navbar(),
-                foto_principal(),
+                crear_barra_superior(),
+                crear_banner_principal(),
                 bg=PaletaDeColores.TERCIARIO_NARANJA.value
             ),
             pagina_no_disponible(),
-            footer()
+            crear_pie_pagina()
         ),
         bg=PaletaDeColores.BG_NEGRO.value,
         background_size="cover",

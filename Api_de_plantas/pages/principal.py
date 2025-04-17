@@ -1,11 +1,9 @@
-from socketserver import ForkingTCPServer
 import reflex as rx
 
 from Api_de_plantas.backend.estados import PlantasState
-from Api_de_plantas.components.enlaces import enlace_paginas
-from Api_de_plantas.components.footer import footer
-from Api_de_plantas.components.imagenes import foto_principal
-from Api_de_plantas.components.navbar import navbar
+from Api_de_plantas.components.footer import crear_pie_pagina
+from Api_de_plantas.components.imagenes import crear_banner_principal
+from Api_de_plantas.components.navbar import crear_barra_superior
 from routers import routers
 from styles.styles import PaletaDeColores, Tamaños, Textos
 
@@ -92,12 +90,12 @@ def main() -> rx.Component:
     return rx.box(
         rx.vstack(
             rx.box(
-                navbar(),
-                foto_principal(),
+                crear_barra_superior(),
+                crear_banner_principal(),
                 bg=PaletaDeColores.TERCIARIO_NARANJA.value
             ),
             grid_cuerpo(),
-            footer()
+            crear_pie_pagina()
         ),
         bg=PaletaDeColores.BG_BLANCO.value,
         background_size="cover",

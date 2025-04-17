@@ -1,11 +1,11 @@
 import reflex as rx
 
 from Api_de_plantas.backend.estados import PlantasState
-from Api_de_plantas.components.enlaces import enlace_paginas
-from Api_de_plantas.components.footer import footer
-from Api_de_plantas.components.grid import grid
-from Api_de_plantas.components.imagenes import foto_principal
-from Api_de_plantas.components.navbar import navbar
+from Api_de_plantas.components.enlaces import crear_barra_navegacion as enlace_paginas
+from Api_de_plantas.components.footer import crear_pie_pagina as footer
+from Api_de_plantas.components.grid import crear_rejilla_plantas as grid
+from Api_de_plantas.components.imagenes import crear_banner_principal as foto_principal
+from Api_de_plantas.components.navbar import crear_barra_superior as navbar
 from routers import routers
 from styles.styles import PaletaDeColores
 

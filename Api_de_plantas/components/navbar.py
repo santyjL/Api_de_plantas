@@ -4,39 +4,68 @@ from Api_de_plantas.backend.estados import PlantasState
 from styles.styles import PaletaDeColores, Tamaños, Textos
 from routers import routers
 
-def links() -> rx.Component:
-    def elemento(titulo: str, link:str) -> rx.Component:
+
+def crear_enlaces_navegacion() -> rx.Component:
+    """
+    Crea un menú de navegación con enlaces a diferentes secciones de la aplicación.
+
+    Returns:
+        rx.Component: Un componente flex que contiene enlaces de navegación.
+    """
+    def crear_elemento_nav(titulo: str, enlace: str) -> rx.Component:
+        """
+        Crea un elemento de navegación estilizado con un título y enlace.
+
+        Args:
+            titulo (str): El texto a mostrar para el elemento de navegación.
+            enlace (str): La ruta a la que redirigir cuando se hace clic en el elemento.
+
+        Returns:
+            rx.Component: Un componente de encabezado estilizado como elemento de navegación.
+        """
         return rx.heading(
             titulo,
-            color = PaletaDeColores.SECUNDARIO_CELESTE.value,
+            color=PaletaDeColores.SECUNDARIO_CELESTE.value,
             font_size=Textos.TEXTO.value,
-            font_family = "sixtyfour",
+            font_family="sixtyfour",
             cursor="pointer",
             filter="drop-shadow(0 0 20px rgba(33, 218, 147, 0.752))",
-            on_click=rx.redirect(link)
-        ),
+            on_click=rx.redirect(enlace)
+        )
 
     return rx.flex(
-
-        elemento("Home", routers.PRINCIPAL.value),
-        elemento("Regador", routers.PRODUCTO.value),
-        rx.box(elemento("P.Agricolas", routers.AGRICOLAS.value),
-               on_click=lambda: PlantasState.cambiar_opcion(2)),
-        rx.box(elemento("P.Interior", routers.DOMESTICAS.value),
-               on_click=lambda: PlantasState.cambiar_opcion(1)),
-        justify= "end",
-        width = "100%",
+        crear_elemento_nav("Home", routers.PRINCIPAL.value),
+        crear_elemento_nav("Regador", routers.PRODUCTO.value),
+        rx.box(
+            crear_elemento_nav("P.Agricolas", routers.AGRICOLAS.value),
+            on_click=lambda: PlantasState.cambiar_opcion(2)
+        ),
+        rx.box(
+            crear_elemento_nav("P.Interior", routers.DOMESTICAS.value),
+            on_click=lambda: PlantasState.cambiar_opcion(1)
+        ),
+        justify="end",
+        width="100%",
         spacing="4"
     )
 
-def navbar() -> rx.Component:
+
+def crear_barra_superior() -> rx.Component:
+    """
+    Crea la barra de navegación principal para la aplicación.
+
+    La barra de navegación incluye el logotipo de la aplicación y enlaces de navegación.
+
+    Returns:
+        rx.Component: Un componente de pila horizontal que contiene el logotipo y enlaces de navegación.
+    """
     return rx.hstack(
         rx.image(src="/favicon.ico"),
-        links(),
-        bg = PaletaDeColores.TERCIARIO_NARANJA.value,
-        heigth = "6em",
-        padding= Tamaños.PADDING_PEQUEÑO.value,
-        width = "100%",
-        indez_z = 5,
+        crear_enlaces_navegacion(),
+        bg=PaletaDeColores.TERCIARIO_NARANJA.value,
+        height="3em",
+        padding=Tamaños.PADDING_PEQUEÑO.value,
+        width="100%",
+        index_z=5,
         justify="start"
     )
