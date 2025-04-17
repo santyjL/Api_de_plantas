@@ -8,12 +8,27 @@ from routers import routers
 from styles.styles import PaletaDeColores, Tamaños, Textos
 
 
-def cuerpo( nombre: str, width: str, height: str,
+def cuerpo(nombre: str, width: str, height: str,
         redireccion: str, bg=PaletaDeColores.PRINCIPAL_VERDE.value,
         texto:str= "") -> rx.Component:
-
+    """
+    Crea una tarjeta interactiva con título, texto y redirección.
+    
+    Esta función genera una tarjeta que muestra información y actúa como un enlace
+    a otras secciones de la aplicación cuando se hace clic.
+    
+    Args:
+        nombre (str): El título que se mostrará en la tarjeta.
+        width (str): El ancho de la tarjeta (puede incluir unidades como px, vw, etc.).
+        height (str): La altura de la tarjeta (puede incluir unidades como px, vh, etc.).
+        redireccion (str): La ruta a la que redirigir cuando se hace clic en la tarjeta.
+        bg (str, opcional): El color de fondo de la tarjeta. Por defecto es verde principal.
+        texto (str, opcional): El texto descriptivo que se mostrará en la tarjeta.
+        
+    Returns:
+        rx.Component: Un componente de tarjeta con los estilos y contenido especificados.
+    """
     return rx.card(
-
         rx.center(
             rx.vstack(
                 rx.heading(nombre, align="center",
@@ -36,6 +51,16 @@ def cuerpo( nombre: str, width: str, height: str,
     )
 
 def grid_cuerpo() -> rx.Component:
+    """
+    Crea una rejilla responsiva con tarjetas de información para la página principal.
+    
+    La rejilla contiene tarjetas para "Sobre Nosotros", "Regador de plantas automático",
+    "Plantas de interior" y "Plantas Agrícolas", cada una con su propia descripción
+    y redirección a la sección correspondiente.
+    
+    Returns:
+        rx.Component: Un componente de caja que contiene una rejilla de tarjetas informativas.
+    """
     return rx.box(
         rx.grid(
             rx.vstack(
@@ -87,6 +112,16 @@ def grid_cuerpo() -> rx.Component:
 
 @rx.page(route=routers.PRINCIPAL.value)
 def main() -> rx.Component:
+    """
+    Página principal de la aplicación.
+    
+    Esta página muestra una barra de navegación, un banner principal,
+    una rejilla con información sobre las diferentes secciones de la aplicación
+    y un pie de página.
+    
+    Returns:
+        rx.Component: La estructura completa de la página principal.
+    """
     return rx.box(
         rx.vstack(
             rx.box(

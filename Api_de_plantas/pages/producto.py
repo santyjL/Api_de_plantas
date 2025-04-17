@@ -7,6 +7,16 @@ from routers import routers
 from styles.styles import PaletaDeColores, Tamaños, Textos
 
 def pagina_no_disponible() -> rx.Component:
+    """
+    Crea un mensaje de "Página no disponible" para secciones en desarrollo.
+    
+    Genera un componente flex con un encabezado centrado que indica que la página
+    solicitada no está disponible actualmente. Se utiliza para secciones que están
+    planificadas pero aún no han sido implementadas.
+    
+    Returns:
+        rx.Component: Un componente flex con un mensaje de página no disponible.
+    """
     return rx.flex(
         rx.heading(
             '"Pagina no disponible"',
@@ -28,6 +38,16 @@ def pagina_no_disponible() -> rx.Component:
 
 @rx.page(route=routers.PRODUCTO.value)
 def regador() -> rx.Component:
+    """
+    Página que mostrará información sobre el regador de plantas automático.
+    
+    Esta página actualmente muestra un mensaje de "Página no disponible" ya que
+    la funcionalidad del regador de plantas automático está en desarrollo. Incluye
+    una barra de navegación, un banner principal y un pie de página.
+    
+    Returns:
+        rx.Component: La estructura de la página del regador de plantas automático.
+    """
     return rx.box(
         rx.vstack(
             rx.box(

@@ -11,6 +11,16 @@ from styles.styles import PaletaDeColores
 
 
 def botones_paginacion() -> rx.Component:
+    """
+    Crea una barra de botones para la paginación de plantas de interior.
+    
+    Genera dos botones numerados que permiten al usuario navegar entre las diferentes
+    páginas de plantas de interior. Cada botón actualiza el estado de la página actual
+    cuando se hace clic.
+    
+    Returns:
+        rx.Component: Un componente de pila horizontal con botones de paginación.
+    """
     return rx.hstack(
         rx.button("1",bg=PaletaDeColores.BOTONES_PAGINACION.value, on_click=lambda: PlantasState.cambiar_valor(0)),
         rx.button("2",bg=PaletaDeColores.BOTONES_PAGINACION.value, on_click=lambda: PlantasState.cambiar_valor(1)),
@@ -22,6 +32,16 @@ def botones_paginacion() -> rx.Component:
 
 @rx.page(route=routers.DOMESTICAS.value)
 def plantas_domesticas() -> rx.Component:
+    """
+    Página que muestra información sobre plantas de interior (domésticas).
+    
+    Esta página incluye una barra de navegación, un banner principal, una rejilla
+    que muestra las plantas de interior, botones de paginación para navegar entre
+    diferentes conjuntos de plantas, una barra de navegación adicional y un pie de página.
+    
+    Returns:
+        rx.Component: La estructura completa de la página de plantas de interior.
+    """
     return rx.box(
         rx.vstack(
             rx.box(
