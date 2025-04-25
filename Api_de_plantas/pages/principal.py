@@ -5,134 +5,137 @@ from Api_de_plantas.components.footer import crear_pie_pagina
 from Api_de_plantas.components.imagenes import crear_banner_principal
 from Api_de_plantas.components.navbar import crear_barra_superior
 from routers import routers
+from styles import styles
 from styles.styles import PaletaDeColores, Tamaños, Textos
+from styles.flex import (contenedor_principal, flex_principal, flex_fila, flex_columna,
+                        item_completo, item_medio, item_pequeño, tarjeta,
+                        tarjeta_interactiva, contenido_tarjeta, texto_tarjeta)
 
 
 def cuerpo(nombre: str, width: str, height: str,
         redireccion: str, bg=PaletaDeColores.PRINCIPAL_VERDE.value,
         texto:str= "", border=Tamaños.BORDER1.value) -> rx.Component:
-    """
-    Crea una tarjeta interactiva con título, texto y redirección.
+    """Crea una tarjeta interactiva con título, texto y redirección."""
+    estilo_tarjeta = dict(tarjeta_interactiva)
+    estilo_tarjeta["bg"] = bg
+    estilo_tarjeta["width"] = width
+    estilo_tarjeta["height"] = height
+    estilo_tarjeta["margin"] = Tamaños.MARGIN_PEQUEÑO.value
+    estilo_tarjeta["border"] = border
+    estilo_tarjeta["border_radius"] = Tamaños.RADIUS.value
 
-    Esta función genera una tarjeta que muestra información y actúa como un enlace
-    a otras secciones de la aplicación cuando se hace clic.
-
-    Args:
-        nombre (str): El título que se mostrará en la tarjeta.
-        width (str): El ancho de la tarjeta (puede incluir unidades como px, vw, etc.).
-        height (str): La altura de la tarjeta (puede incluir unidades como px, vh, etc.).
-        redireccion (str): La ruta a la que redirigir cuando se hace clic en la tarjeta.
-        bg (str, opcional): El color de fondo de la tarjeta. Por defecto es verde principal.
-        texto (str, opcional): El texto descriptivo que se mostrará en la tarjeta.
-
-    Returns:
-        rx.Component: Un componente de tarjeta con los estilos y contenido especificados.
-    """
     return rx.card(
-        rx.center(
+        rx.flex(
             rx.vstack(
-                rx.heading(nombre, align="center",
-                        font_size=Textos.TITULO.value, weight="bold",
+                rx.heading(nombre,
+                        font_size=Textos.TITULO.value,
+                        weight="bold",
                         font_family="Itim"),
-                rx.text(texto, align="center",font_size=Textos.TEXTO.value,
-                font_family="Oswald",width="80%"),
-                align="center",
-                justify="center",
-            )
+                rx.text(texto,
+                        font_size=Textos.TEXTO.value,
+                        font_family="Oswald",
+                        width="100%"),
+                style=texto_tarjeta
+            ),
+            style=contenido_tarjeta
         ),
         on_click=lambda: rx.redirect(redireccion),
-        bg=bg,
-        width=width,
-        height=height,
-        margin=Tamaños.MARGIN_PEQUEÑO.value,
-        border=border,
-        border_radius=Tamaños.RADIUS.value,
-        cursor="pointer",
+        style=estilo_tarjeta
     )
 
-def grid_cuerpo() -> rx.Component:
-    """
-    Crea una rejilla responsiva con tarjetas de información para la página principal.
+def flex_cuerpo() -> rx.Component:
+    """Layout flexible con tarjetas de información para la página principal."""
+    # Estilo para el encabezado
+    header_style = dict(item_completo)
+    header_style["margin_bottom"] = "2rem"
 
-    La rejilla contiene tarjetas para "Sobre Nosotros", "Regador de plantas automático",
-    "Plantas de interior" y "Plantas Agrícolas", cada una con su propia descripción
-    y redirección a la sección correspondiente.
+    # Estilo para la columna grande (flex: 2)
+    columna_grande_style = dict(item_medio)
+    columna_grande_style["flex"] = "2"
 
-    Returns:
-        rx.Component: Un componente de caja que contiene una rejilla de tarjetas informativas.
-    """
-    return rx.box(
-        rx.grid(
-            rx.vstack(
-                cuerpo("Sobre Nosotros", "80vw", "30vh",routers.PRINCIPAL.value,
-                 PaletaDeColores.SECUNDARIO_AZUL.value, texto="""
-                 Este proyecto tiene como objetivo principal vender y promover el cuido de las plantas en escuelas y comunidades,
-                 apoyando a las comunidades agricolas. Contiene una lista detallada de plantas domesticas y agricolas,
-                 con sus respectivas caracteristicas y necesidades para su cuido ideal.
-                 """, border=Tamaños.BORDER2.value),
-                grid_column="span 2",
+    # Estilo para las columnas pequeñas (flex: 1)
+    columna_pequeña_style = dict(item_pequeño)
+    columna_pequeña_style["flex"] = "1"
+
+    return rx.container(
+        # Header/Banner principal
+        rx.flex(
+            rx.flex(
+                cuerpo("Sobre Nosotros", "100%", "auto", routers.PRINCIPAL.value,
+                     PaletaDeColores.SECUNDARIO_AZUL.value, texto="""
+                     Este proyecto tiene como objetivo principal vender y promover el cuido de las plantas en escuelas y comunidades,
+                     apoyando a las comunidades agricolas. Contiene una lista detallada de plantas domesticas y agricolas,
+                     con sus respectivas caracteristicas y necesidades para su cuido ideal.
+                     """, border=Tamaños.BORDER2.value),
+                style=item_completo
             ),
-            rx.hstack(
-                cuerpo("Regador de plantas automatico", "40vw", "60vh", routers.PRODUCTO.value,
-                      texto="""
-                      Sistema de riego automático inteligente para tus plantas.
-                      Controla el riego de forma precisa y mantén tus plantas saludables
-                      con nuestra tecnología innovadora. Ideal para jardines y huertos.
-                      """),
-                grid_row="span 2",
-            ),
-            rx.box(
-                cuerpo("Plantas de interior", "40vw", "27vh", routers.DOMESTICAS.value,
+            style=header_style
+        ),
+
+        # Main content - Layout de 2 columnas principales
+        rx.flex(
+            # Columna izquierda - Plantas apiladas verticalmente
+            rx.flex(
+                # Plantas de interior
+                cuerpo("Plantas de interior", "100%", "100%", routers.DOMESTICAS.value,
                       texto="""
                       Descubre nuestra selección de plantas de interior perfectas para
                       decorar y purificar el aire de tu hogar. Incluye guías de cuidado
                       y consejos de mantenimiento.
                       """),
-                on_click=lambda: PlantasState.cambiar_opcion(1),
-            ),
-            rx.box(
-                cuerpo("Plantas Agricolas", "40vw", "27vh", routers.AGRICOLAS.value,
+                
+                # Plantas Agrícolas
+                cuerpo("Plantas Agricolas", "100%", "100%", routers.AGRICOLAS.value,
                       texto="""
                       Explora nuestra colección de plantas agrícolas de alta calidad.
                       Cultivos tradicionales y especializados con información detallada
                       sobre su siembra y cosecha.
                       """),
-                on_click=lambda: PlantasState.cambiar_opcion(2),
+                direction="column",
+                width="100%",
+                flex="1",
+                gap="1em"
             ),
-            columns="2",
-            rows="3",
+            
+            # Columna derecha - Regador de plantas (más grande)
+            rx.flex(
+                cuerpo("Regador de plantas automatico", "100%", "100%", routers.PRODUCTO.value,
+                      texto="""
+                      Sistema de riego automático inteligente para tus plantas.
+                      Controla el riego de forma precisa y mantén tus plantas saludables
+                      con nuestra tecnología innovadora. Ideal para jardines y huertos.
+                      """),
+                flex="2",
+                width="100%"
+            ),
+            
+            direction="row",
+            width="100%",
+            flex_wrap="wrap",
+            gap="1em"
         ),
-        width="80%",  # Ancho fijo del contenedor del grid
-        margin="0 auto",  # Centrar horizontalmente
-        height="100vh",  # Altura total de la ventana
-        justify="center",  # Centrado vertical
-        align_items="center",  # Centrado horizontal
+        
+        style=contenedor_principal
     )
 
 
 @rx.page(route=routers.PRINCIPAL.value)
 def main() -> rx.Component:
-    """
-    Página principal de la aplicación.
-
-    Esta página muestra una barra de navegación, un banner principal,
-    una rejilla con información sobre las diferentes secciones de la aplicación
-    y un pie de página.
-
-    Returns:
-        rx.Component: La estructura completa de la página principal.
-    """
+    """Página principal de la aplicación."""
     return rx.box(
         rx.vstack(
             rx.box(
                 crear_barra_superior(),
                 crear_banner_principal(),
-                bg=PaletaDeColores.TERCIARIO_MORADO.value
+                bg=PaletaDeColores.TERCIARIO_MORADO.value,
+                width="100%",
             ),
-            grid_cuerpo(),
+            flex_cuerpo(),
             crear_pie_pagina()
         ),
         bg=PaletaDeColores.BG.value,
         background_size="cover",
         min_height="100vh",
+        width="100%",
+        spacing="0",
     )
