@@ -83,5 +83,5 @@ def crear_pie_pagina() -> rx.Component:
         ),
         spacing="5",
         width="100%",
-        bg=PaletaDeColores.SECUNDARIO_AZUL.value,
+        bg=PaletaDeColores.TERCIARIO_MORADO.value,
     )

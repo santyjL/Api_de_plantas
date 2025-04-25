@@ -5,10 +5,9 @@ from Api_de_plantas.components.footer import crear_pie_pagina
 from Api_de_plantas.components.imagenes import crear_banner_principal
 from Api_de_plantas.components.navbar import crear_barra_superior
 from routers import routers
-from styles import styles
 from styles.styles import PaletaDeColores, Tamaños, Textos
-from styles.flex import (contenedor_principal, flex_principal, flex_fila, flex_columna,
-                        item_completo, item_medio, item_pequeño, tarjeta,
+from styles.flex import (contenedor_principal, flex_principal,
+                        item_completo, item_medio, item_pequeño,
                         tarjeta_interactiva, contenido_tarjeta, texto_tarjeta)
 
 
@@ -67,7 +66,7 @@ def flex_cuerpo() -> rx.Component:
                      apoyando a las comunidades agricolas. Contiene una lista detallada de plantas domesticas y agricolas,
                      con sus respectivas caracteristicas y necesidades para su cuido ideal.
                      """, border=Tamaños.BORDER2.value),
-                style=item_completo
+                style=flex_principal
             ),
             style=header_style
         ),
@@ -83,7 +82,7 @@ def flex_cuerpo() -> rx.Component:
                       decorar y purificar el aire de tu hogar. Incluye guías de cuidado
                       y consejos de mantenimiento.
                       """),
-                
+
                 # Plantas Agrícolas
                 cuerpo("Plantas Agricolas", "100%", "100%", routers.AGRICOLAS.value,
                       texto="""
@@ -96,7 +95,7 @@ def flex_cuerpo() -> rx.Component:
                 flex="1",
                 gap="1em"
             ),
-            
+
             # Columna derecha - Regador de plantas (más grande)
             rx.flex(
                 cuerpo("Regador de plantas automatico", "100%", "100%", routers.PRODUCTO.value,
@@ -108,13 +107,13 @@ def flex_cuerpo() -> rx.Component:
                 flex="2",
                 width="100%"
             ),
-            
+
             direction="row",
             width="100%",
             flex_wrap="wrap",
             gap="1em"
         ),
-        
+
         style=contenedor_principal
     )
 
