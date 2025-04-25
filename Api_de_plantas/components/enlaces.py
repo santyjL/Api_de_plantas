@@ -35,7 +35,7 @@ def crear_boton_navegacion(etiqueta: str, ruta_redireccion: str, color_fondo: st
             "margin": Tamaños.MARGIN_PEQUEÑO.value,
             "bg": color_fondo,
             "font_weight": "bold",
-            "border": Tamaños.BORDER.value,
+            "border": Tamaños.BORDER2.value,
             "border_radius": Tamaños.RADIUS.value,
             "cursor": "pointer",
         },
@@ -85,7 +85,7 @@ def crear_barra_navegacion(opcion: int) -> rx.Component:
             crear_boton_navegacion(
                 "Regador de plantas automatico",
                 routers.PRODUCTO.value,
-                PaletaDeColores.TERCIARIO_MORADO.value
+                PaletaDeColores.BOTONES.value
             ),
             columns="3",
             rows="1",

@@ -50,7 +50,8 @@ def renderizar_tarjeta_planta(planta: dict) -> rx.Component:
         padding=Tamaños.PADDING_MEDIANO.value,
         margin=Tamaños.MARGIN_PEQUEÑO.value,
         bg=PaletaDeColores.PRINCIPAL_VERDE.value,
-        border_radius=Tamaños.RADIUS.value
+        border_radius=Tamaños.RADIUS.value,
+        border=Tamaños.BORDER1.value
     )
 
 

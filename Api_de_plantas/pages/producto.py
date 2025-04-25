@@ -25,7 +25,7 @@ def pagina_no_disponible() -> rx.Component:
             font_size=Textos.TITULO.value,
             color=PaletaDeColores.TEXTO.value,
             weight="medium",
-            border=Tamaños.BORDER.value,
+            border=Tamaños.BORDER1.value,
             padding=Tamaños.PADDING_MEDIANO.value,
             margin=Tamaños.MARGIN_GRANDE.value
         ),

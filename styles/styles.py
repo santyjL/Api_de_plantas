@@ -30,5 +30,6 @@ class Tamaños(Enum):
     MARGIN_MEDIANO = "1em"
     MARGIN_GRANDE = "1.5em"
 
-    BORDER = "3px solid #FFFFFF"
+    BORDER1 = "3px solid #2ECC80"
+    BORDER2 = "3px solid #3134CE"
     RADIUS = "2em"

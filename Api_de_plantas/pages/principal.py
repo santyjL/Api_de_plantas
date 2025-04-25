@@ -10,7 +10,7 @@ from styles.styles import PaletaDeColores, Tamaños, Textos
 
 def cuerpo(nombre: str, width: str, height: str,
         redireccion: str, bg=PaletaDeColores.PRINCIPAL_VERDE.value,
-        texto:str= "") -> rx.Component:
+        texto:str= "", border=Tamaños.BORDER1.value) -> rx.Component:
     """
     Crea una tarjeta interactiva con título, texto y redirección.
 
@@ -45,7 +45,7 @@ def cuerpo(nombre: str, width: str, height: str,
         width=width,
         height=height,
         margin=Tamaños.MARGIN_PEQUEÑO.value,
-        border=Tamaños.BORDER.value,
+        border=border,
         border_radius=Tamaños.RADIUS.value,
         cursor="pointer",
     )
@@ -69,7 +69,7 @@ def grid_cuerpo() -> rx.Component:
                  Este proyecto tiene como objetivo principal vender y promover el cuido de las plantas en escuelas y comunidades,
                  apoyando a las comunidades agricolas. Contiene una lista detallada de plantas domesticas y agricolas,
                  con sus respectivas caracteristicas y necesidades para su cuido ideal.
-                 """),
+                 """, border=Tamaños.BORDER2.value),
                 grid_column="span 2",
             ),
             rx.hstack(
