@@ -6,27 +6,27 @@ from styles.styles import PaletaDeColores, Tamaños
 def crear_enlace_social(icono: str, href: str) -> rx.Component:
     """
     Crea un enlace a redes sociales con un icono.
-    
+
     Args:
         icono (str): El nombre del icono a mostrar.
         href (str): La URL a la que enlazar.
-    
+
     Returns:
         rx.Component: Un componente de enlace con el icono y URL especificados.
     """
     return rx.link(
-        rx.icon(icono), 
-        href=href, 
-        color=PaletaDeColores.TERCIARIO_NARANJA.value
+        rx.icon(icono),
+        href=href,
+        color=PaletaDeColores.TERCIARIO_MORADO.value
     )
 
 
 def crear_enlaces_sociales() -> rx.Component:
     """
     Crea un contenedor flex con enlaces a redes sociales.
-    
+
     Actualmente incluye un enlace a GitHub para el repositorio del proyecto.
-    
+
     Returns:
         rx.Component: Un componente flex que contiene enlaces a redes sociales.
     """
@@ -44,9 +44,9 @@ def crear_enlaces_sociales() -> rx.Component:
 def crear_pie_pagina() -> rx.Component:
     """
     Crea el componente de pie de página para la aplicación.
-    
+
     El pie de página incluye el logotipo de la aplicación, el nombre de la marca y enlaces a redes sociales.
-    
+
     Returns:
         rx.Component: Un elemento de pie de página con marca y enlaces sociales.
     """
@@ -83,5 +83,5 @@ def crear_pie_pagina() -> rx.Component:
         ),
         spacing="5",
         width="100%",
-        bg=PaletaDeColores.SECUNDARIO_CELESTE.value,
+        bg=PaletaDeColores.SECUNDARIO_AZUL.value,
     )

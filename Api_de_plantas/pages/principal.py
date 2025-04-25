@@ -13,10 +13,10 @@ def cuerpo(nombre: str, width: str, height: str,
         texto:str= "") -> rx.Component:
     """
     Crea una tarjeta interactiva con título, texto y redirección.
-    
+
     Esta función genera una tarjeta que muestra información y actúa como un enlace
     a otras secciones de la aplicación cuando se hace clic.
-    
+
     Args:
         nombre (str): El título que se mostrará en la tarjeta.
         width (str): El ancho de la tarjeta (puede incluir unidades como px, vw, etc.).
@@ -24,7 +24,7 @@ def cuerpo(nombre: str, width: str, height: str,
         redireccion (str): La ruta a la que redirigir cuando se hace clic en la tarjeta.
         bg (str, opcional): El color de fondo de la tarjeta. Por defecto es verde principal.
         texto (str, opcional): El texto descriptivo que se mostrará en la tarjeta.
-        
+
     Returns:
         rx.Component: Un componente de tarjeta con los estilos y contenido especificados.
     """
@@ -53,11 +53,11 @@ def cuerpo(nombre: str, width: str, height: str,
 def grid_cuerpo() -> rx.Component:
     """
     Crea una rejilla responsiva con tarjetas de información para la página principal.
-    
+
     La rejilla contiene tarjetas para "Sobre Nosotros", "Regador de plantas automático",
     "Plantas de interior" y "Plantas Agrícolas", cada una con su propia descripción
     y redirección a la sección correspondiente.
-    
+
     Returns:
         rx.Component: Un componente de caja que contiene una rejilla de tarjetas informativas.
     """
@@ -65,7 +65,7 @@ def grid_cuerpo() -> rx.Component:
         rx.grid(
             rx.vstack(
                 cuerpo("Sobre Nosotros", "80vw", "30vh",routers.PRINCIPAL.value,
-                 PaletaDeColores.SECUNDARIO_CELESTE.value, texto="""
+                 PaletaDeColores.SECUNDARIO_AZUL.value, texto="""
                  Este proyecto tiene como objetivo principal vender y promover el cuido de las plantas en escuelas y comunidades,
                  apoyando a las comunidades agricolas. Contiene una lista detallada de plantas domesticas y agricolas,
                  con sus respectivas caracteristicas y necesidades para su cuido ideal.
@@ -114,11 +114,11 @@ def grid_cuerpo() -> rx.Component:
 def main() -> rx.Component:
     """
     Página principal de la aplicación.
-    
+
     Esta página muestra una barra de navegación, un banner principal,
     una rejilla con información sobre las diferentes secciones de la aplicación
     y un pie de página.
-    
+
     Returns:
         rx.Component: La estructura completa de la página principal.
     """
@@ -127,12 +127,12 @@ def main() -> rx.Component:
             rx.box(
                 crear_barra_superior(),
                 crear_banner_principal(),
-                bg=PaletaDeColores.TERCIARIO_NARANJA.value
+                bg=PaletaDeColores.TERCIARIO_MORADO.value
             ),
             grid_cuerpo(),
             crear_pie_pagina()
         ),
-        bg=PaletaDeColores.BG_BLANCO.value,
+        bg=PaletaDeColores.BG.value,
         background_size="cover",
         min_height="100vh",
     )

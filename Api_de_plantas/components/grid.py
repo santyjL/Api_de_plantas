@@ -77,7 +77,7 @@ def crear_rejilla_plantas() -> rx.Component:
             weight="bold",
             align="center",
             margin=Tamaños.MARGIN_GRANDE.value,
-            color=PaletaDeColores.SECUNDARIO_CELESTE,
+            color=PaletaDeColores.SECUNDARIO_AZUL,
             font_family="Itim"
         ),
         rx.cond(

@@ -13,11 +13,11 @@ from styles.styles import PaletaDeColores
 def botones_paginacion() -> rx.Component:
     """
     Crea una barra de botones para la paginación de plantas agrícolas.
-    
+
     Genera tres botones numerados que permiten al usuario navegar entre las diferentes
     páginas de plantas agrícolas. Cada botón actualiza el estado de la página actual
     cuando se hace clic.
-    
+
     Returns:
         rx.Component: Un componente de pila horizontal con botones de paginación.
     """
@@ -35,11 +35,11 @@ def botones_paginacion() -> rx.Component:
 def plantas_agricolas() -> rx.Component:
     """
     Página que muestra información sobre plantas agrícolas.
-    
+
     Esta página incluye una barra de navegación, un banner principal, una rejilla
     que muestra las plantas agrícolas, botones de paginación para navegar entre
     diferentes conjuntos de plantas, una barra de navegación adicional y un pie de página.
-    
+
     Returns:
         rx.Component: La estructura completa de la página de plantas agrícolas.
     """
@@ -48,14 +48,14 @@ def plantas_agricolas() -> rx.Component:
             rx.box(
                 navbar(),
                 foto_principal(),
-                bg=PaletaDeColores.TERCIARIO_NARANJA.value
+                bg=PaletaDeColores.TERCIARIO_MORADO.value
             ),
             grid(),
             botones_paginacion(),
             enlace_paginas(2),
             footer()
         ),
-        bg=PaletaDeColores.BG_BLANCO.value,
+        bg=PaletaDeColores.BG.value,
         background_size="cover",
         min_height="100vh",
     )

@@ -25,7 +25,7 @@ def crear_enlaces_navegacion() -> rx.Component:
         """
         return rx.heading(
             titulo,
-            color=PaletaDeColores.SECUNDARIO_CELESTE.value,
+            color=PaletaDeColores.SECUNDARIO_AZUL.value,
             font_size=Textos.TEXTO.value,
             font_family="sixtyfour",
             cursor="pointer",
@@ -62,7 +62,7 @@ def crear_barra_superior() -> rx.Component:
     return rx.hstack(
         rx.image(src="/favicon.ico"),
         crear_enlaces_navegacion(),
-        bg=PaletaDeColores.TERCIARIO_NARANJA.value,
+        bg=PaletaDeColores.TERCIARIO_MORADO.value,
         height="3em",
         padding=Tamaños.PADDING_PEQUEÑO.value,
         width="100%",

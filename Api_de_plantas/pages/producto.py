@@ -9,11 +9,11 @@ from styles.styles import PaletaDeColores, Tamaños, Textos
 def pagina_no_disponible() -> rx.Component:
     """
     Crea un mensaje de "Página no disponible" para secciones en desarrollo.
-    
+
     Genera un componente flex con un encabezado centrado que indica que la página
     solicitada no está disponible actualmente. Se utiliza para secciones que están
     planificadas pero aún no han sido implementadas.
-    
+
     Returns:
         rx.Component: Un componente flex con un mensaje de página no disponible.
     """
@@ -40,11 +40,11 @@ def pagina_no_disponible() -> rx.Component:
 def regador() -> rx.Component:
     """
     Página que mostrará información sobre el regador de plantas automático.
-    
+
     Esta página actualmente muestra un mensaje de "Página no disponible" ya que
     la funcionalidad del regador de plantas automático está en desarrollo. Incluye
     una barra de navegación, un banner principal y un pie de página.
-    
+
     Returns:
         rx.Component: La estructura de la página del regador de plantas automático.
     """
@@ -53,12 +53,12 @@ def regador() -> rx.Component:
             rx.box(
                 crear_barra_superior(),
                 crear_banner_principal(),
-                bg=PaletaDeColores.TERCIARIO_NARANJA.value
+                bg=PaletaDeColores.TERCIARIO_MORADO.value
             ),
             pagina_no_disponible(),
             crear_pie_pagina()
         ),
-        bg=PaletaDeColores.BG_NEGRO.value,
+        bg=PaletaDeColores.BG.value,
         background_size="cover",
         min_height="100vh",
     )
