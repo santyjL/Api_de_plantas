@@ -1,6 +1,6 @@
 .typing-effect {
 	overflow: hidden;
-	border11-right: 0.15em solid rgb(40, 200, 192);
+	border-right: 0.15em solid rgb(40, 200, 192);
 	white-space: nowrap;
 	margin: 0 auto;
 	letter-spacing: 0.15em;
