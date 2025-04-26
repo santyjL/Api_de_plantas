@@ -74,7 +74,7 @@ tarjeta_interactiva = {
     "transition": "transform 0.3s ease, box-shadow 0.3s ease",
     "_hover": {
         "transform": "translateY(-5px)",
-        "box_shadow": "0 6px 12px rgba(0, 0, 0, 0.15)",
+        "box_shadow": "0 6px 12px rgba(0, 0, 0, 0.80)",
     },
 }
 

@@ -27,6 +27,11 @@ def renderizar_tarjeta_planta(planta: dict) -> rx.Component:
                 background_color=PaletaDeColores.PRINCIPAL_VERDE.value,
                 border_radius=Tamaños.RADIUS.value,
                 border=Tamaños.BORDER1.value,
+                transition="transform 0.4s ease, box-shadow 0.4s ease",
+                _hover= {
+                    "transform": "translateY(-5px)",
+                    "box_shadow": "0 6px 12px rgba(46, 204, 128, 1)",
+                }
             )
         ),
         rx.dialog.content(
