@@ -2,69 +2,246 @@
 	"plantas_domesticas": [
 		{
 			"nombre": "Sacuanjoche",
+			"nombre_cientifico": "Plumeria rubra",
+			"tipo_planta": "Árbol pequeño",
 			"area_natural": "Bosques secos y cálidos",
 			"humedad_ideal": "Baja (40-50%)",
+			"temperatura_ideal": "25-30°C",
 			"imagen": "/flor-de-sacuanjoche.jpg"
 		},
 		{
 			"nombre": "Ruda",
+			"nombre_cientifico": "Ruta graveolens",
+			"tipo_planta": "Arbusto",
 			"area_natural": "Regiones templadas y tropicales",
 			"humedad_ideal": "Media (50-60%)",
+			"temperatura_ideal": "15-25°C",
 			"imagen": "/ruda.jpg"
 		},
 		{
 			"nombre": "Albahaca",
+			"nombre_cientifico": "Ocimum basilicum",
+			"tipo_planta": "Hierba aromática",
 			"area_natural": "Zonas tropicales y subtropicales",
 			"humedad_ideal": "Alta (60-70%)",
+			"temperatura_ideal": "20-30°C",
 			"imagen": "/albahaca.jpg"
 		},
 		{
 			"nombre": "Orégano",
+			"nombre_cientifico": "Origanum vulgare",
+			"tipo_planta": "Hierba aromática",
 			"area_natural": "Regiones cálidas y secas",
 			"humedad_ideal": "Baja (40-50%)",
+			"temperatura_ideal": "18-25°C",
 			"imagen": "/oregano.jpg"
 		},
 		{
 			"nombre": "Menta",
+			"nombre_cientifico": "Mentha spicata",
+			"tipo_planta": "Hierba aromática",
 			"area_natural": "Climas húmedos y frescos",
 			"humedad_ideal": "Alta (70-80%)",
+			"temperatura_ideal": "18-22°C",
 			"imagen": "/menta.jpg"
 		},
 		{
 			"nombre": "Manzanilla",
+			"nombre_cientifico": "Matricaria chamomilla",
+			"tipo_planta": "Hierba",
 			"area_natural": "Pastizales y bordes de caminos",
 			"humedad_ideal": "Media (50-60%)",
+			"temperatura_ideal": "15-20°C",
 			"imagen": "/manzanilla.jpg"
 		},
 		{
 			"nombre": "Zarzaparrilla",
+			"nombre_cientifico": "Smilax aspera",
+			"tipo_planta": "Trepadora",
 			"area_natural": "Bosques húmedos y tropicales",
 			"humedad_ideal": "Alta (70-80%)",
+			"temperatura_ideal": "22-28°C",
 			"imagen": "/zarzaparrilla.jpg"
 		},
 		{
 			"nombre": "Hombre grande",
+			"nombre_cientifico": "Quararibea funebris",
+			"tipo_planta": "Árbol",
 			"area_natural": "Selvas tropicales",
 			"humedad_ideal": "Alta (70-80%)",
+			"temperatura_ideal": "24-30°C",
 			"imagen": "/hombre-grande.jpg"
 		},
 		{
 			"nombre": "Zorrillo",
+			"nombre_cientifico": "Petiveria alliacea",
+			"tipo_planta": "Hierba",
 			"area_natural": "Selvas tropicales y zonas húmedas",
 			"humedad_ideal": "Alta (75-85%)",
+			"temperatura_ideal": "24-28°C",
 			"imagen": "/zorrillo.jpg"
 		},
 		{
 			"nombre": "Balsa",
+			"nombre_cientifico": "Ochroma pyramidale",
+			"tipo_planta": "Árbol",
 			"area_natural": "Bosques húmedos y ríos",
 			"humedad_ideal": "Alta (70-80%)",
+			"temperatura_ideal": "25-30°C",
 			"imagen": "/balsa.jpg"
 		},
 		{
 			"nombre": "Laurel",
+			"nombre_cientifico": "Laurus nobilis",
+			"tipo_planta": "Arbusto",
 			"area_natural": "Bosques secos y húmedos",
 			"humedad_ideal": "Media (50-60%)",
+			"temperatura_ideal": "15-22°C",
 			"imagen": "/laurel.jpg"
+		},
+		{
+			"nombre": "Romero",
+			"nombre_cientifico": "Rosmarinus officinalis",
+			"tipo_planta": "Arbusto",
+			"area_natural": "Zonas secas y soleadas",
+			"humedad_ideal": "Baja (30-50%)",
+			"temperatura_ideal": "20-25°C",
+			"imagen": "/romero.jpg"
+		},
+		{
+			"nombre": "Salvia",
+			"nombre_cientifico": "Salvia officinalis",
+			"tipo_planta": "Arbusto",
+			"area_natural": "Regiones secas y cálidas",
+			"humedad_ideal": "Media (40-60%)",
+			"temperatura_ideal": "20-28°C",
+			"imagen": "/salvia.jpg"
+		},
+		{
+			"nombre": "Cilantro",
+			"nombre_cientifico": "Coriandrum sativum",
+			"tipo_planta": "Hierba",
+			"area_natural": "Zonas templadas",
+			"humedad_ideal": "Media (50-60%)",
+			"temperatura_ideal": "18-22°C",
+			"imagen": "/cilantro.jpg"
+		},
+		{
+			"nombre": "Perejil",
+			"nombre_cientifico": "Petroselinum crispum",
+			"tipo_planta": "Hierba",
+			"area_natural": "Regiones templadas",
+			"humedad_ideal": "Media (50-60%)",
+			"temperatura_ideal": "16-22°C",
+			"imagen": "/perejil.jpg"
+		},
+		{
+			"nombre": "Hierbabuena",
+			"nombre_cientifico": "Mentha spicata",
+			"tipo_planta": "Hierba aromática",
+			"area_natural": "Climas frescos y húmedos",
+			"humedad_ideal": "Alta (70-80%)",
+			"temperatura_ideal": "15-20°C",
+			"imagen": "/hierbabuena.jpg"
+		},
+		{
+			"nombre": "Tomillo",
+			"nombre_cientifico": "Thymus vulgaris",
+			"tipo_planta": "Arbusto pequeño",
+			"area_natural": "Zonas secas y soleadas",
+			"humedad_ideal": "Baja (30-40%)",
+			"temperatura_ideal": "18-25°C",
+			"imagen": "/tomillo.jpg"
+		},
+		{
+			"nombre": "Lavanda",
+			"nombre_cientifico": "Lavandula angustifolia",
+			"tipo_planta": "Arbusto",
+			"area_natural": "Zonas áridas y soleadas",
+			"humedad_ideal": "Baja (30-40%)",
+			"temperatura_ideal": "20-28°C",
+			"imagen": "/lavanda.jpg"
+		},
+		{
+			"nombre": "Cactus",
+			"nombre_cientifico": "Cactaceae spp.",
+			"tipo_planta": "Suculenta",
+			"area_natural": "Desiertos",
+			"humedad_ideal": "Muy baja (10-20%)",
+			"temperatura_ideal": "25-35°C",
+			"imagen": "/cactus.jpg"
+		},
+		{
+			"nombre": "Espatifilo",
+			"nombre_cientifico": "Spathiphyllum wallisii",
+			"tipo_planta": "Planta de interior",
+			"area_natural": "Selvas tropicales",
+			"humedad_ideal": "Alta (70-80%)",
+			"temperatura_ideal": "20-26°C",
+			"imagen": "/espatifilo.jpg"
+		},
+		{
+			"nombre": "Helecho de Boston",
+			"nombre_cientifico": "Nephrolepis exaltata",
+			"tipo_planta": "Helecho",
+			"area_natural": "Bosques húmedos",
+			"humedad_ideal": "Alta (70-90%)",
+			"temperatura_ideal": "18-24°C",
+			"imagen": "/helecho-boston.jpg"
+		},
+		{
+			"nombre": "Areca",
+			"nombre_cientifico": "Dypsis lutescens",
+			"tipo_planta": "Palmera",
+			"area_natural": "Selvas tropicales",
+			"humedad_ideal": "Alta (60-80%)",
+			"temperatura_ideal": "20-30°C",
+			"imagen": "/areca.jpg"
+		},
+		{
+			"nombre": "Lengua de Suegra",
+			"nombre_cientifico": "Sansevieria trifasciata",
+			"tipo_planta": "Suculenta",
+			"area_natural": "Áreas áridas",
+			"humedad_ideal": "Baja (20-40%)",
+			"temperatura_ideal": "20-30°C",
+			"imagen": "/lengua-suegra.jpg"
+		},
+		{
+			"nombre": "Aloe Vera",
+			"nombre_cientifico": "Aloe barbadensis miller",
+			"tipo_planta": "Suculenta",
+			"area_natural": "Zonas áridas",
+			"humedad_ideal": "Baja (20-30%)",
+			"temperatura_ideal": "20-30°C",
+			"imagen": "/aloe-vera.jpg"
+		},
+		{
+			"nombre": "Ficus",
+			"nombre_cientifico": "Ficus benjamina",
+			"tipo_planta": "Árbol pequeño",
+			"area_natural": "Bosques tropicales",
+			"humedad_ideal": "Media (50-60%)",
+			"temperatura_ideal": "20-25°C",
+			"imagen": "/ficus.jpg"
+		},
+		{
+			"nombre": "Jazmín",
+			"nombre_cientifico": "Jasminum officinale",
+			"tipo_planta": "Trepadora",
+			"area_natural": "Regiones cálidas",
+			"humedad_ideal": "Media (50-60%)",
+			"temperatura_ideal": "20-30°C",
+			"imagen": "/jazmin.jpg"
+		},
+		{
+			"nombre": "Anturio",
+			"nombre_cientifico": "Anthurium andraeanum",
+			"tipo_planta": "Planta de interior",
+			"area_natural": "Selvas tropicales",
+			"humedad_ideal": "Alta (70-80%)",
+			"temperatura_ideal": "20-28°C",
+			"imagen": "/anturio.jpg"
 		}
 	]
 }

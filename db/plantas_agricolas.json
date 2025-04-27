@@ -2,123 +2,256 @@
 	"plantas_agricolas": [
 		{
 			"nombre": "Maíz",
+			"nombre_cientifico": "Zea mays",
+			"tipo_planta": "Gramínea anual",
 			"area_natural": "Regiones cálidas y templadas",
-			"humedad_ideal": "Media (50-60%)",
+			"humedad_ideal": "Media-alta (60-80%)",
+			"temperatura_ideal": "18-27°C",
+			"altitud_optima": "300-1800 msnm",
+			"tipo_suelo": "Franco-arenoso, bien drenado y fértil",
 			"imagen": "/maiz.jpg"
 		},
 		{
 			"nombre": "Frijol",
-			"area_natural": "Zonas cálidas y tropicales",
-			"humedad_ideal": "Media (50-60%)",
+			"nombre_cientifico": "Phaseolus vulgaris",
+			"tipo_planta": "Leguminosa anual",
+			"area_natural": "Regiones cálidas y templadas",
+			"humedad_ideal": "Media (50-70%)",
+			"temperatura_ideal": "18-24°C",
+			"altitud_optima": "0-2000 msnm",
+			"tipo_suelo": "Franco-limoso o franco-arenoso, bien drenado",
 			"imagen": "/frijol.jpg"
 		},
 		{
 			"nombre": "Arroz",
-			"area_natural": "Climas húmedos y cálidos",
-			"humedad_ideal": "Alta (70-80%)",
+			"nombre_cientifico": "Oryza sativa",
+			"tipo_planta": "Gramínea anual",
+			"area_natural": "Regiones tropicales y subtropicales húmedas",
+			"humedad_ideal": "Muy alta (80-90%)",
+			"temperatura_ideal": "21-30°C",
+			"altitud_optima": "0-1500 msnm",
+			"tipo_suelo": "Arcilloso o franco-arcilloso, capaz de retener agua",
 			"imagen": "/arroz.jpg"
 		},
 		{
 			"nombre": "Café",
-			"area_natural": "Regiones montañosas y húmedas",
+			"nombre_cientifico": "Coffea arabica",
+			"tipo_planta": "Arbusto perenne",
+			"area_natural": "Zonas tropicales de alta montaña",
 			"humedad_ideal": "Alta (70-80%)",
+			"temperatura_ideal": "18-24°C",
+			"altitud_optima": "800-2200 msnm",
+			"tipo_suelo": "Franco-limoso, ácido (pH 5.0-6.0), bien drenado",
 			"imagen": "/cafe.jpg"
 		},
 		{
-			"nombre": "Cacao",
-			"area_natural": "Selvas tropicales húmedas",
-			"humedad_ideal": "Alta (75-85%)",
-			"imagen": "/cacao.jpg"
+			"nombre": "Caña de azúcar",
+			"nombre_cientifico": "Saccharum officinarum",
+			"tipo_planta": "Gramínea perenne",
+			"area_natural": "Regiones tropicales y subtropicales cálidas",
+			"humedad_ideal": "Alta (70-90%)",
+			"temperatura_ideal": "25-30°C",
+			"altitud_optima": "0-1600 msnm",
+			"tipo_suelo": "Franco-arcilloso o franco-arenoso, fértil y profundo",
+			"imagen": "/cana_de_azucar.jpg"
 		},
 		{
-			"nombre": "Plátano",
-			"area_natural": "Zonas tropicales y bajas",
-			"humedad_ideal": "Alta (75-85%)",
-			"imagen": "/platano.jpg"
+			"nombre": "Sorgo",
+			"nombre_cientifico": "Sorghum bicolor",
+			"tipo_planta": "Gramínea anual",
+			"area_natural": "Regiones cálidas y semiáridas",
+			"humedad_ideal": "Media-baja (40-60%)",
+			"temperatura_ideal": "25-30°C",
+			"altitud_optima": "0-1500 msnm",
+			"tipo_suelo": "Franco-arenoso, tolerante a suelos pobres",
+			"imagen": "/sorgo.jpg"
+		},
+		{
+			"nombre": "Maní",
+			"nombre_cientifico": "Arachis hypogaea",
+			"tipo_planta": "Leguminosa anual",
+			"area_natural": "Regiones cálidas",
+			"humedad_ideal": "Media (50-70%)",
+			"temperatura_ideal": "20-30°C",
+			"altitud_optima": "0-1500 msnm",
+			"tipo_suelo": "Franco-arenoso, bien drenado",
+			"imagen": "/mani.jpg"
+		},
+		{
+			"nombre": "Cítricos",
+			"nombre_cientifico": "Citrus spp.",
+			"tipo_planta": "Árbol perenne",
+			"area_natural": "Regiones cálidas subtropicales",
+			"humedad_ideal": "Media (50-60%)",
+			"temperatura_ideal": "22-30°C",
+			"altitud_optima": "0-1500 msnm",
+			"tipo_suelo": "Franco-arenoso, bien drenado",
+			"imagen": "/citricos.jpg"
 		},
 		{
 			"nombre": "Mango",
-			"area_natural": "Regiones cálidas y secas",
-			"humedad_ideal": "Baja (40-50%)",
+			"nombre_cientifico": "Mangifera indica",
+			"tipo_planta": "Árbol perenne",
+			"area_natural": "Zonas tropicales y subtropicales",
+			"humedad_ideal": "Media-alta (60-80%)",
+			"temperatura_ideal": "24-30°C",
+			"altitud_optima": "0-1200 msnm",
+			"tipo_suelo": "Franco-arenoso, bien drenado",
 			"imagen": "/mango.jpg"
 		},
 		{
 			"nombre": "Papaya",
-			"area_natural": "Climas cálidos y tropicales",
-			"humedad_ideal": "Media (50-60%)",
+			"nombre_cientifico": "Carica papaya",
+			"tipo_planta": "Árbol pequeño perenne",
+			"area_natural": "Regiones tropicales",
+			"humedad_ideal": "Alta (70-90%)",
+			"temperatura_ideal": "25-30°C",
+			"altitud_optima": "0-1500 msnm",
+			"tipo_suelo": "Franco-arenoso, bien drenado, rico en materia orgánica",
 			"imagen": "/papaya.jpg"
 		},
 		{
-			"nombre": "Guayaba",
+			"nombre": "Aguacate",
+			"nombre_cientifico": "Persea americana",
+			"tipo_planta": "Árbol perenne",
+			"area_natural": "Zonas cálidas y templadas",
+			"humedad_ideal": "Alta (70-80%)",
+			"temperatura_ideal": "18-24°C",
+			"altitud_optima": "600-2400 msnm",
+			"tipo_suelo": "Franco-limoso o franco-arenoso, bien drenado",
+			"imagen": "/aguacate.jpg"
+		},
+		{
+			"nombre": "Plátano",
+			"nombre_cientifico": "Musa paradisiaca",
+			"tipo_planta": "Herbácea perenne",
+			"area_natural": "Regiones tropicales",
+			"humedad_ideal": "Muy alta (80-90%)",
+			"temperatura_ideal": "26-30°C",
+			"altitud_optima": "0-1200 msnm",
+			"tipo_suelo": "Franco-arcilloso, profundo y rico en materia orgánica",
+			"imagen": "/platano.jpg"
+		},
+		{
+			"nombre": "Tomate",
+			"nombre_cientifico": "Solanum lycopersicum",
+			"tipo_planta": "Hierba anual",
+			"area_natural": "Regiones cálidas y templadas",
+			"humedad_ideal": "Media (50-70%)",
+			"temperatura_ideal": "20-25°C",
+			"altitud_optima": "0-2000 msnm",
+			"tipo_suelo": "Franco, fértil, bien drenado",
+			"imagen": "/tomate.jpg"
+		},
+		{
+			"nombre": "Chiltoma",
+			"nombre_cientifico": "Capsicum annuum",
+			"tipo_planta": "Hierba anual",
 			"area_natural": "Zonas cálidas y tropicales",
-			"humedad_ideal": "Media (50-60%)",
-			"imagen": "/guayaba.jpg"
+			"humedad_ideal": "Media (60-70%)",
+			"temperatura_ideal": "20-27°C",
+			"altitud_optima": "0-1500 msnm",
+			"tipo_suelo": "Franco, fértil y bien drenado",
+			"imagen": "/chiltoma.jpg"
 		},
 		{
-			"nombre": "Nancite",
-			"area_natural": "Zonas secas y cálidas",
-			"humedad_ideal": "Baja (40-50%)",
-			"imagen": "/nancite.jpg"
+			"nombre": "Cebolla",
+			"nombre_cientifico": "Allium cepa",
+			"tipo_planta": "Hierba bienal (cultivada como anual)",
+			"area_natural": "Regiones templadas",
+			"humedad_ideal": "Media (50-70%)",
+			"temperatura_ideal": "12-25°C",
+			"altitud_optima": "0-3000 msnm",
+			"tipo_suelo": "Franco, bien drenado, rico en materia orgánica",
+			"imagen": "/cebolla.jpg"
 		},
 		{
-			"nombre": "Sorgo",
-			"area_natural": "Regiones secas y semiáridas",
-			"humedad_ideal": "Baja (30-40%)",
-			"imagen": "/sorgo.jpg"
+			"nombre": "Zanahoria",
+			"nombre_cientifico": "Daucus carota subsp. sativus",
+			"tipo_planta": "Hierba bienal (cultivada como anual)",
+			"area_natural": "Regiones templadas y frescas",
+			"humedad_ideal": "Media (60-70%)",
+			"temperatura_ideal": "15-20°C",
+			"altitud_optima": "0-2500 msnm",
+			"tipo_suelo": "Franco-arenoso, suelto y profundo",
+			"imagen": "/zanahoria.jpg"
 		},
 		{
-			"nombre": "Achiote",
-			"area_natural": "Zonas cálidas y húmedas",
-			"humedad_ideal": "Media (50-60%)",
-			"imagen": "/achiote.jpg"
-		},
-		{
-			"nombre": "Chiltepe",
-			"area_natural": "Zonas tropicales y húmedas",
+			"nombre": "Repollo",
+			"nombre_cientifico": "Brassica oleracea var. capitata",
+			"tipo_planta": "Hierba bienal (cultivada como anual)",
+			"area_natural": "Regiones templadas y frescas",
 			"humedad_ideal": "Alta (70-80%)",
-			"imagen": "/chiltepe.jpg"
+			"temperatura_ideal": "15-20°C",
+			"altitud_optima": "0-2500 msnm",
+			"tipo_suelo": "Franco-limoso, bien drenado",
+			"imagen": "/repollo.jpg"
 		},
 		{
-			"nombre": "Tamarindo",
-			"area_natural": "Zonas secas y cálidas",
-			"humedad_ideal": "Baja (40-50%)",
-			"imagen": "/tamarindo.jpg"
-		},
-		{
-			"nombre": "Pitahaya",
-			"area_natural": "Regiones áridas y semiáridas",
-			"humedad_ideal": "Baja (30-40%)",
-			"imagen": "/pitahaya.jpg"
-		},
-		{
-			"nombre": "Maracuyá",
-			"area_natural": "Zonas tropicales y húmedas",
+			"nombre": "Papas",
+			"nombre_cientifico": "Solanum tuberosum",
+			"tipo_planta": "Hierba perenne (cultivada como anual)",
+			"area_natural": "Regiones templadas y frías",
 			"humedad_ideal": "Alta (70-80%)",
-			"imagen": "/maracuya.jpg"
+			"temperatura_ideal": "15-20°C",
+			"altitud_optima": "800-4000 msnm",
+			"tipo_suelo": "Franco-arenoso, bien drenado",
+			"imagen": "/papas.jpg"
 		},
 		{
-			"nombre": "Granada",
-			"area_natural": "Regiones secas y cálidas",
-			"humedad_ideal": "Baja (40-50%)",
-			"imagen": "/Granada.jpg"
-		},
-		{
-			"nombre": "Anona",
-			"area_natural": "Zonas tropicales y húmedas",
+			"nombre": "Ayote",
+			"nombre_cientifico": "Cucurbita argyrosperma",
+			"tipo_planta": "Enredadera anual",
+			"area_natural": "Regiones cálidas y subtropicales",
 			"humedad_ideal": "Media (50-60%)",
-			"imagen": "/Anona.jpg"
+			"temperatura_ideal": "20-28°C",
+			"altitud_optima": "0-1500 msnm",
+			"tipo_suelo": "Franco-arenoso, bien drenado",
+			"imagen": "/ayote.jpg"
 		},
 		{
-			"nombre": "Zapote",
-			"area_natural": "Zonas tropicales y cálidas",
-			"humedad_ideal": "Media (50-60%)",
-			"imagen": "/zapote.jpg"
+			"nombre": "Melón",
+			"nombre_cientifico": "Cucumis melo",
+			"tipo_planta": "Enredadera anual",
+			"area_natural": "Regiones cálidas y secas",
+			"humedad_ideal": "Media-baja (40-60%)",
+			"temperatura_ideal": "24-30°C",
+			"altitud_optima": "0-1500 msnm",
+			"tipo_suelo": "Franco-arenoso, bien drenado",
+			"imagen": "/melon.jpg"
 		},
 		{
-			"nombre": "Jocote",
-			"area_natural": "Climas cálidos y secos",
-			"humedad_ideal": "Baja (40-50%)",
-			"imagen": "/jocote.jpg"
+			"nombre": "Sandía",
+			"nombre_cientifico": "Citrullus lanatus",
+			"tipo_planta": "Enredadera anual",
+			"area_natural": "Regiones cálidas y secas",
+			"humedad_ideal": "Media-baja (40-60%)",
+			"temperatura_ideal": "24-30°C",
+			"altitud_optima": "0-1500 msnm",
+			"tipo_suelo": "Franco-arenoso, bien drenado",
+			"imagen": "/sandia.jpg"
+		},
+		{
+			"nombre": "Culantro",
+			"nombre_cientifico": "Coriandrum sativum",
+			"tipo_planta": "Hierba anual",
+			"area_natural": "Regiones templadas a cálidas",
+			"humedad_ideal": "Media (50-70%)",
+			"temperatura_ideal": "18-24°C",
+			"altitud_optima": "0-2500 msnm",
+			"tipo_suelo": "Franco-limoso, bien drenado",
+			"imagen": "/culantro.jpg"
+		},
+		{
+			"nombre": "Moringa",
+			"nombre_cientifico": "Moringa oleifera",
+			"tipo_planta": "Árbol caducifolio rápido",
+			"area_natural": "Regiones tropicales y subtropicales",
+			"humedad_ideal": "Media (50-70%)",
+			"temperatura_ideal": "25-35°C",
+			"altitud_optima": "0-1200 msnm",
+			"tipo_suelo": "Franco-arenoso o arenoso, bien drenado",
+			"imagen": "/moringa.jpg"
 		}
 	]
 }

@@ -25,9 +25,11 @@ def crear_enlaces_navegacion() -> rx.Component:
         """
         return rx.heading(
             titulo,
-            color=PaletaDeColores.PRINCIPAL_VERDE.value,
+            color=PaletaDeColores.TEXTO.value,
             font_size=Textos.TEXTO.value,
             font_family="sixtyfour",
+            weight="regular",
+            spacing="3px",
             cursor="pointer",
             filter="drop-shadow(0 0 20px rgba(33, 218, 147, 0.752))",
             on_click=rx.redirect(enlace)

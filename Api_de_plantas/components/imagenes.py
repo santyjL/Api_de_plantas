@@ -5,22 +5,22 @@ from styles.styles import Tamaños, Textos
 def crear_banner_principal() -> rx.Component:
     """
     Crea un componente de banner principal con una imagen de fondo y un encabezado.
-    
+
     El banner principal muestra el nombre de la empresa "Somos SifNiento..." con un efecto
     de escritura sobre una imagen de fondo.
-    
+
     Returns:
         rx.Component: Un componente de caja con una imagen de fondo y un encabezado animado.
     """
     return rx.box(
         rx.flex(
             rx.heading(
-                "Somos SifNiento...", 
+                ">_Somos SifNiento...",
                 class_name="typing-effect",
-                font_size=Textos.TITULO.value, 
+                font_size=Textos.TITULO.value,
                 font_family="Sixtyfour",
                 align="center",
-                justify="center", 
+                justify="center",
                 padding=Tamaños.PADDING_PEQUEÑO.value
             ),
             direction="column",

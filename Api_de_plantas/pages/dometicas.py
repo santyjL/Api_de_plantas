@@ -22,8 +22,9 @@ def botones_paginacion() -> rx.Component:
         rx.Component: Un componente de pila horizontal con botones de paginación.
     """
     return rx.hstack(
-        rx.button("1",bg=PaletaDeColores.BOTONES_PAGINACION.value, on_click=lambda: PlantasState.cambiar_valor(0)),
-        rx.button("2",bg=PaletaDeColores.BOTONES_PAGINACION.value, on_click=lambda: PlantasState.cambiar_valor(1)),
+        rx.button("1",bg=PaletaDeColores.BOTONES_PAGINACION.value, on_click=lambda: PlantasState.cambiar_valor(0),cursor="pointer"),
+        rx.button("2",bg=PaletaDeColores.BOTONES_PAGINACION.value, on_click=lambda: PlantasState.cambiar_valor(1),cursor="pointer"),
+        rx.button("3",bg=PaletaDeColores.BOTONES_PAGINACION.value, on_click=lambda: PlantasState.cambiar_valor(2),cursor="pointer"),
         justify="center",
         align_items="center",
         width="5%",
