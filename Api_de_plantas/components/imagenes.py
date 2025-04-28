@@ -1,5 +1,6 @@
 import reflex as rx
 from styles.styles import Tamaños, Textos
+from styles.typing import effecto_typing
 
 
 def crear_banner_principal() -> rx.Component:
@@ -16,12 +17,19 @@ def crear_banner_principal() -> rx.Component:
         rx.flex(
             rx.heading(
                 ">_Somos SifNiento...",
-                class_name="typing-effect",
                 font_size=Textos.TITULO.value,
                 font_family="Sixtyfour",
                 align="center",
+                border_right="0.15em solid rgb(40, 200,192)",
+                overflow="hidden",
                 justify="center",
-                padding=Tamaños.PADDING_PEQUEÑO.value
+                white_space="nowrap",
+                margin="0 auto",
+                padding=Tamaños.PADDING_PEQUEÑO.value,
+                animation="typing 3.5s steps(100, end),blink-caret 0.5s step-end infinite",
+                display="inline-block",
+                max_width="fit-content",
+                _style= effecto_typing
             ),
             direction="column",
             justify="center",

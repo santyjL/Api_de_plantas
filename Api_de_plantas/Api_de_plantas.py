@@ -8,7 +8,7 @@ from styles.styles import STYLESHEETS
 
 # Configurar Reflex para servir la aplicación
 app = rx.App(
-    stylesheets=["/styles/stylescss.css"] + STYLESHEETS
+    stylesheets=STYLESHEETS
 )
 app.add_page(main)
 app.add_page(plantas_agricolas)
