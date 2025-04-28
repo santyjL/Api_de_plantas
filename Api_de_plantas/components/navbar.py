@@ -2,6 +2,7 @@ import reflex as rx
 
 from Api_de_plantas.backend.estados import PlantasState
 from styles.styles import PaletaDeColores, Tamaños, Textos
+from styles.hover import aparecion
 from routers import routers
 
 
@@ -31,7 +32,11 @@ def crear_enlaces_navegacion() -> rx.Component:
             weight="regular",
             spacing="3px",
             cursor="pointer",
-            filter="drop-shadow(0 0 20px rgba(33, 218, 147, 0.752))",
+            transition="background 0.3s linear, box-shadow 0.4s linear",
+            border_radius=Tamaños.RADIUS.value,
+            padding="3px",
+            bg="transparent",
+            _hover=aparecion,
             on_click=rx.redirect(enlace)
         )
 
@@ -65,7 +70,7 @@ def crear_barra_superior() -> rx.Component:
         rx.image(src="/favicon.ico"),
         crear_enlaces_navegacion(),
         bg=PaletaDeColores.TERCIARIO_MORADO.value,
-        height="3em",
+        height="auto",
         padding=Tamaños.PADDING_PEQUEÑO.value,
         width="100%",
         index_z=5,

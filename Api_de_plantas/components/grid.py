@@ -2,6 +2,7 @@ import reflex as rx
 
 from styles.styles import PaletaDeColores, Tamaños, Textos
 from Api_de_plantas.backend.estados import PlantasState
+from styles.hover import movimiento_y
 
 
 def campo_modal_planta(titulo: str, valor: str):
@@ -57,10 +58,7 @@ def renderizar_tarjeta_planta(planta: dict) -> rx.Component:
                 border=Tamaños.BORDER1.value,
                 transition="transform 0.4s ease, box-shadow 0.4s ease",
                 role="dialog",
-                _hover= {
-                    "transform": "translateY(-5px)",
-                    "box_shadow": "0 6px 12px rgba(46, 204, 128, 1)",
-                }
+                _hover= movimiento_y
             )
         ),
         rx.dialog.content(
