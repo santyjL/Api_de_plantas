@@ -47,7 +47,7 @@ def plantas_agricolas() -> rx.Component:
         rx.vstack(
             rx.box(
                 navbar(),
-                foto_principal(),
+                foto_principal("Plantas Agrícolas"),
                 bg=PaletaDeColores.TERCIARIO_MORADO.value
             ),
             grid(),

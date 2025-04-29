@@ -52,7 +52,7 @@ def regador() -> rx.Component:
         rx.vstack(
             rx.box(
                 crear_barra_superior(),
-                crear_banner_principal(),
+                crear_banner_principal("Regador De Plantas Automatico"),
                 bg=PaletaDeColores.TERCIARIO_MORADO.value
             ),
             pagina_no_disponible(),

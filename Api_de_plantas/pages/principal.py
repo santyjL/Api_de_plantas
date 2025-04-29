@@ -125,7 +125,7 @@ def main() -> rx.Component:
         rx.vstack(
             rx.box(
                 crear_barra_superior(),
-                crear_banner_principal(),
+                crear_banner_principal("Pagina Principal"),
                 bg=PaletaDeColores.TERCIARIO_MORADO.value,
                 width="100%",
             ),

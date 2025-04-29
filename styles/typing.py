@@ -7,5 +7,10 @@ effecto_typing={
         "from": {"border_color": "transparent"},
         "to":{"border-color":"transparent"},
         "50%": {"border-color":"rgb(108, 20, 189)"}
+    },
+    "@keyframes multicolor" :{
+        "0%": {"background-position" : "0% 50%"},
+        "50%": {"background-position" : "100% 50%"},
+        "100%": {"background-position" : "0% 50%"}
     }
 }

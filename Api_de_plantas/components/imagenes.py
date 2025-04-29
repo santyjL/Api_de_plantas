@@ -1,9 +1,10 @@
 import reflex as rx
-from styles.styles import Tamaños, Textos
+from styles.styles import PaletaDeColores, Tamaños, Textos
 from styles.typing import effecto_typing
+from styles.respiracion import effecto_respiracion
 
 
-def crear_banner_principal() -> rx.Component:
+def crear_banner_principal(nombre_pagina: str) -> rx.Component:
     """
     Crea un componente de banner principal con una imagen de fondo y un encabezado.
 
@@ -25,12 +26,35 @@ def crear_banner_principal() -> rx.Component:
                 justify="center",
                 white_space="nowrap",
                 margin="0 auto",
+                background=f"linear-gradient(45deg, {PaletaDeColores.TERCIARIO_MORADO.value}, {PaletaDeColores.TEXTO.value})",
+                background_size= "400% 400%",
+                color="transparent",
                 padding=Tamaños.PADDING_PEQUEÑO.value,
-                animation="typing 3.5s steps(100, end),blink-caret 0.5s step-end infinite",
+                animation="typing 3.5s steps(100, end),blink-caret 0.5s step-end infinite, multicolor 5s linear infinite alternate",
                 display="inline-block",
                 max_width="fit-content",
-                _style= effecto_typing
+                background_clip="text",
+                _style= effecto_typing,
+                _webkit_background_clip="text",
             ),
+            rx.text(
+                nombre_pagina,
+                font_size=Textos.SUBTITULO.value,
+                font_family="Sixtyfour",
+                align="center",
+                justify="center",
+                white_space="nowrap",
+                margin="0 auto",
+                padding=Tamaños.PADDING_PEQUEÑO.value,
+                display="inline-block",
+                max_width="fit-content",
+                color=PaletaDeColores.TEXTO.value,
+                font_weight="medium",
+                filter="drop-shadow(0px 0px 10px rgba(46, 204, 128, 0))",
+                animation="respiracion 2s infinite",
+                _style= effecto_respiracion,
+            ),
+
             direction="column",
             justify="center",
             align="center",
