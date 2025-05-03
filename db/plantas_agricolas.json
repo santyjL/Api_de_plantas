@@ -243,15 +243,16 @@
 			"imagen": "/culantro.jpg"
 		},
 		{
-			"nombre": "Moringa",
-			"nombre_cientifico": "Moringa oleifera",
-			"tipo_planta": "Árbol caducifolio rápido",
-			"area_natural": "Regiones tropicales y subtropicales",
-			"humedad_ideal": "Media (50-70%)",
-			"temperatura_ideal": "25-35°C",
-			"altitud_optima": "0-1200 msnm",
+			"nombre": "Oregano",
+			"nombre_cientifico": "Origanum vulgare",
+			"tipo_planta": "herbácea perenne,",
+			"area_natural": "cálido y seco",
+			"humedad_ideal": "Media (30-50%)",
+			"temperatura_ideal": "15-20°C",
+			"altitud_optima": "0-2500 msnm",
 			"tipo_suelo": "Franco-arenoso o arenoso, bien drenado",
-			"imagen": "/moringa.jpg"
+			"imagen": "/oregano.jpg"
 		}
 	]
 }
+
