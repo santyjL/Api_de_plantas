@@ -16,6 +16,8 @@ class PaletaDeColores(Enum):
     BOTONES = "#262556"
 
     TEXTO= "#FFFFFF"
+    TEXTO1 = "#71bfa6"
+    TEXTO2 = "#9A9AC6"
 
 class Textos(Enum):
     TITULO = "2.5em"

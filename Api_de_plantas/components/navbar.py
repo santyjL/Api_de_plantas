@@ -51,28 +51,32 @@ def crear_enlaces_navegacion() -> rx.Component:
             crear_elemento_nav("P.Interior", routers.DOMESTICAS.value),
             on_click=lambda: PlantasState.cambiar_opcion(1)
         ),
-        justify="end",
-        width="100%",
+        justify="center",
         spacing="4"
     )
 
 
 def crear_barra_superior() -> rx.Component:
-    """
-    Crea la barra de navegación principal para la aplicación.
-
-    La barra de navegación incluye el logotipo de la aplicación y enlaces de navegación.
-
-    Returns:
-        rx.Component: Un componente de pila horizontal que contiene el logotipo y enlaces de navegación.
-    """
-    return rx.hstack(
-        rx.image(src="/favicon.ico"),
-        crear_enlaces_navegacion(),
-        bg=PaletaDeColores.TERCIARIO_MORADO.value,
-        height="auto",
-        padding=Tamaños.PADDING_PEQUEÑO.value,
-        width="100%",
-        index_z=5,
-        justify="start"
+    return rx.box(
+        rx.center(
+            rx.image(src="/favicon.ico", border_radius="50%",margin_x="6px"),
+            crear_enlaces_navegacion(),
+            bg=PaletaDeColores.TERCIARIO_MORADO.value,
+            height="auto",
+            padding=Tamaños.PADDING_PEQUEÑO.value,
+            width="720px",
+            z_index="8",
+            justify="center",
+            align="center",
+            margin="0 auto",
+            border_radius=Tamaños.RADIUS.value,
+        ),
+        position="fixed",
+        top="0px",
+        left="50%",
+        opacity="0.9",
+        transform="translateX(-50%)",
+        width="720px",
+        z_index="10",
+        margin_y="10px"
     )

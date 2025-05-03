@@ -41,7 +41,8 @@ def renderizar_tarjeta_planta(planta: dict) -> rx.Component:
                     width="250px",
                     height="150px",
                     border_radius=Tamaños.RADIUS.value,
-                    margin_y=Tamaños.MARGIN_PEQUEÑO.value
+                    margin_y=Tamaños.MARGIN_PEQUEÑO.value,
+                    loading="lazy",
                 ),
                 rx.text(
                     planta["nombre"],
@@ -121,8 +122,8 @@ def crear_rejilla_plantas() -> rx.Component:
             weight="bold",
             align="center",
             margin=Tamaños.MARGIN_GRANDE.value,
-            color=PaletaDeColores.SECUNDARIO_AZUL,
-            font_family="Itim"
+            color=PaletaDeColores.TEXTO.value,
+            font_family="Itim",
         ),
         rx.cond(
             (PlantasState.pagina < 0) | (PlantasState.pagina >= 3),

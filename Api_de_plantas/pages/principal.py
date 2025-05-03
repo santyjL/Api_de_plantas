@@ -5,16 +5,23 @@ from Api_de_plantas.components.footer import crear_pie_pagina
 from Api_de_plantas.components.imagenes import crear_banner_principal
 from Api_de_plantas.components.navbar import crear_barra_superior
 from routers import routers
+from textos import pagina_principal_text
 from styles.styles import PaletaDeColores, Tamaños, Textos
 from styles.flex import (contenedor_principal, flex_principal,
                         item_completo, item_medio, item_pequeño,
                         tarjeta_interactiva, contenido_tarjeta, texto_tarjeta)
 
+(sobre_nosotros,
+plantas_interiores,
+plantas_agricolas,
+regador_automatico) = pagina_principal_text
 
-def cuerpo(nombre: str, width: str, height: str,
+def cuerpo(nombre: str, width: str, height: str,color_texto: str,
         redireccion: str, bg=PaletaDeColores.PRINCIPAL_VERDE.value,
         texto:str= "", border=Tamaños.BORDER1.value) -> rx.Component:
+
     """Crea una tarjeta interactiva con título, texto y redirección."""
+
     estilo_tarjeta = dict(tarjeta_interactiva)
     estilo_tarjeta["bg"] = bg
     estilo_tarjeta["width"] = width
@@ -26,14 +33,19 @@ def cuerpo(nombre: str, width: str, height: str,
     return rx.card(
         rx.flex(
             rx.vstack(
-                rx.heading(nombre,
-                        font_size=Textos.TITULO.value,
-                        weight="bold",
-                        font_family="Itim"),
-                rx.text(texto,
-                        font_size=Textos.TEXTO.value,
-                        font_family="Oswald",
-                        width="100%"),
+                rx.heading(
+                    nombre,
+                    font_size=Textos.TITULO.value,
+                    weight="bold",
+                    font_family="Itim"
+                    ),
+                rx.text(
+                    texto,
+                    font_size=Textos.TEXTO.value,
+                    font_family="Oswald",
+                    width="100%",
+                    color=color_texto
+                    ),
                 style=texto_tarjeta
             ),
             style=contenido_tarjeta
@@ -43,8 +55,10 @@ def cuerpo(nombre: str, width: str, height: str,
     )
 
 def flex_cuerpo() -> rx.Component:
+
     """Layout flexible con tarjetas de información para la página principal."""
     # Estilo para el encabezado
+
     header_style = dict(item_completo)
     header_style["margin_bottom"] = "2rem"
 
@@ -60,12 +74,11 @@ def flex_cuerpo() -> rx.Component:
         # Header/Banner principal
         rx.flex(
             rx.flex(
-                cuerpo("Sobre Nosotros", "100%", "auto", routers.PRINCIPAL.value,
-                     PaletaDeColores.SECUNDARIO_AZUL.value, texto="""
-                     Este proyecto tiene como objetivo principal vender y promover el cuido de las plantas en escuelas y comunidades,
-                     apoyando a las comunidades agricolas. Contiene una lista detallada de plantas domesticas y agricolas,
-                     con sus respectivas caracteristicas y necesidades para su cuido ideal.
-                     """, border=Tamaños.BORDER2.value),
+                cuerpo(
+                    "Sobre Nosotros", "100%", "auto",PaletaDeColores.TEXTO2.value, routers.PRINCIPAL.value,
+                    PaletaDeColores.SECUNDARIO_AZUL.value, texto=sobre_nosotros,
+                    border=Tamaños.BORDER2.value
+                    ),
                 style=flex_principal
             ),
             style=header_style
@@ -76,20 +89,22 @@ def flex_cuerpo() -> rx.Component:
             # Columna izquierda - Plantas apiladas verticalmente
             rx.flex(
                 # Plantas de interior
-                cuerpo("Plantas de interior", "100%", "100%", routers.DOMESTICAS.value,
-                      texto="""
-                      Descubre nuestra selección de plantas de interior perfectas para
-                      decorar y purificar el aire de tu hogar. Incluye guías de cuidado
-                      y consejos de mantenimiento.
-                      """),
+                rx.box(
+                cuerpo(
+                    "Plantas de interior", "100%", "100%", PaletaDeColores.TEXTO1.value,routers.DOMESTICAS.value,
+                    texto=plantas_interiores
+                    ),
+                    on_click=lambda: PlantasState.cambiar_opcion(1)
+                ),
 
                 # Plantas Agrícolas
-                cuerpo("Plantas Agricolas", "100%", "100%", routers.AGRICOLAS.value,
-                      texto="""
-                      Explora nuestra colección de plantas agrícolas de alta calidad.
-                      Cultivos tradicionales y especializados con información detallada
-                      sobre su siembra y cosecha.
-                      """),
+                rx.box(
+                cuerpo(
+                    "Plantas Agricolas", "100%", "100%", PaletaDeColores.TEXTO1.value, routers.AGRICOLAS.value,
+                    texto=plantas_agricolas
+                    ),
+                    on_click=lambda: PlantasState.cambiar_opcion(2)
+                ),
                 direction="column",
                 width="100%",
                 flex="1",
@@ -98,12 +113,10 @@ def flex_cuerpo() -> rx.Component:
 
             # Columna derecha - Regador de plantas (más grande)
             rx.flex(
-                cuerpo("Regador de plantas automatico", "100%", "100%", routers.PRODUCTO.value,
-                      texto="""
-                      Sistema de riego automático inteligente para tus plantas.
-                      Controla el riego de forma precisa y mantén tus plantas saludables
-                      con nuestra tecnología innovadora. Ideal para jardines y huertos.
-                      """),
+                cuerpo(
+                    "Regador de plantas automatico", "100%", "100%", PaletaDeColores.TEXTO1.value, routers.PRODUCTO.value,
+                    texto=regador_automatico
+                    ),
                 flex="2",
                 width="100%"
             ),
