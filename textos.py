@@ -6,7 +6,7 @@ pagina_principal_text = [
     """,
 
     """
-    escubre nuestra selección de plantas de interior perfectas para
+    Descubre nuestra selección de plantas de interior perfectas para
     decorar y purificar el aire de tu hogar. Incluye guías de cuidado y consejos de mantenimiento.
     """,
 

@@ -59,6 +59,7 @@ def renderizar_tarjeta_planta(planta: dict) -> rx.Component:
                 border=Tamaños.BORDER1.value,
                 transition="transform 0.4s ease, box-shadow 0.4s ease",
                 role="dialog",
+                cursor="pointer",
                 _hover= movimiento_y
             )
         ),

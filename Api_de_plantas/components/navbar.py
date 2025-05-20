@@ -59,7 +59,7 @@ def crear_enlaces_navegacion() -> rx.Component:
 def crear_barra_superior() -> rx.Component:
     return rx.box(
         rx.center(
-            rx.image(src="/favicon.ico", border_radius="50%",margin_x="6px"),
+            rx.image(src="/favicon.ico",margin_x="6px"),
             crear_enlaces_navegacion(),
             bg=PaletaDeColores.TERCIARIO_MORADO.value,
             height="auto",
