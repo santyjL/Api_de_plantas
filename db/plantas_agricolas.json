@@ -1,5 +1,5 @@
 {
-	"plantas_agricolas": [
+	"api_plantas_agricolas": [
 		{
 			"nombre": "Maíz",
 			"nombre_cientifico": "Zea mays",
@@ -255,4 +255,3 @@
 		}
 	]
 }
-

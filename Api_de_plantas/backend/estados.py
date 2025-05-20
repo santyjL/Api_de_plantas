@@ -14,11 +14,11 @@ class PlantasState(rx.State):
     def plantas_actuales(self) -> List[Dict]:
         with open("db/plantas_domesticas.json", "r", encoding="UTF-8") as archivo:
             data = json.load(archivo)
-            plantas_domesticas = data["plantas_domesticas"]
+            plantas_domesticas = data["api_plantas_domesticas"]
 
         with open("db/plantas_agricolas.json", "r", encoding="UTF-8") as archivo:
             data = json.load(archivo)
-            plantas_agricolas = data["plantas_agricolas"]
+            plantas_agricolas = data["api_plantas_agricolas"]
 
         return plantas_domesticas if self.opcion == 1 else plantas_agricolas
 
